@@ -1,5 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable no-param-reassign */
+
 const { createSlice } = require('@reduxjs/toolkit');
 
 const initialState = {
