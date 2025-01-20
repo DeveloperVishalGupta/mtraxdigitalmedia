@@ -9,7 +9,7 @@ import { CarouselItem, services } from "@/model/constant";
 import Image from "next/image";
 
 function Home() {
-  console.log(CarouselItem);
+  // console.log(CarouselItem);
 
   return (
     <>

@@ -367,11 +367,14 @@ export const contactNumbers = [
 export const spatikaServiceMenu = {
   "menu": {
     "categories": [
-      "Haircare",
-      "Skincare",
-      "Waxing",
-      "Manicure/Pedicure",
-      "Spa"
+      {
+        title: 'Haircare'
+        // y = null 
+      },
+      { title: 'Skincare' },
+      { title: 'Waxing' },
+      { title: 'Manicure/Pedicure' },
+      { title: 'Spa' },
     ],
     "haircare": {
       "male": {

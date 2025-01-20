@@ -20,21 +20,35 @@ import Image from 'next/image';
 import { NestedAccordion } from '../nestedAccordian';
 
 function Services() {
+    const allServices = spatikaServiceMenu.menu
     const [selectedService, setSelectedService] = useState({})
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    console.log(allServices);
+
+
+    function renderArrayByKey(keyToCheck) {
+        if (keyToCheck in obj) {
+            return obj[keyToCheck];
+        } else {
+            return `Key "${keyToCheck}" not found in object`;
+        }
+    }
 
     return (
         <div className='border bg-slate-200 mt-8 px-10 pt-16 pb-14'>
             <h1 className="text-3xl font-semibold mb-4 text-black">Services</h1>
 
             <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
-                {services.map((item, index) => {
-                    console.log(item);
+                {allServices.categories.map((item, index) => {
+                    // console.log(item);
 
                     return <Card className='border p-4 relative group' key={index} isPressable shadow="sm"
                         onPress={() => {
                             onOpen();
                             setSelectedService(item)
+                            renderArrayByKey()
+                            console.log(item);
+
                         }
                         }>
                         <div className=''>

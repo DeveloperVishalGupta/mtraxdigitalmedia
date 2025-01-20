@@ -1,7 +1,6 @@
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 export const NestedAccordion = ({ data }) => {
-    console.log(data);
 
     return (
         // <Accordion>

@@ -17,7 +17,6 @@ function SimpleSlider({ data }) {
         <div className="slider-container ">
             <Slider {...settings}>
                 {data.map((item, index) => {
-                    console.log(item);
                     return <div key={index} className="carouselHight" >
                         <Image alt="image" src={item.image} className="w-11/12 h-full mx-auto" />
                     </div >

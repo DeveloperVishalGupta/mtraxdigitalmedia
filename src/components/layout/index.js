@@ -5,7 +5,6 @@ import Footer from '../footer';
 // import NewHeader from '../newHeader';
 
 function Layout({ children }) {
-    console.log(children);
 
     return (
         <div>
