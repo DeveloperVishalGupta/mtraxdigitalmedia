@@ -35,42 +35,6 @@ const AboutUs = () => {
                     </Button>
                 </div>
             </div>
-            <div>
-
-                <div className="px-10 gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6  ">
-                    {/* {partenrs.map((item, index) => {
-                        let BGColor;
-                        if (item.title === 'Jeannot' ||
-                            item.title === 'Brazilian Hairtech' ||
-                            item.title === 'Deplieve' ||
-                            item.title === 'Raaga') {
-                            BGColor = 'bg-black';
-                        }
-
-                        return <Card className=' p-3 relative group' key={index} isPressable shadow="sm" onPress={() => console.log("item pressed")}>
-                            <div className=''>
-                                <CardBody className="overflow-visible p-0">
-                                    <div className='border rounded-lg overflow-hidden'>
-                                        <Image
-                                            alt={item.title}
-                                            className={`${BGColor} w-full object-cover`}
-                                            radius="lg"
-                                            shadow="sm"
-                                            src={item.img}
-                                            width="100%"
-                                        />
-                                    </div>
-
-                                </CardBody>
-                                <CardFooter className="text-small justify-between">
-                                    <b>{item.title}</b>
-                                    <p className="text-default-500">{item.detail}</p>
-                                </CardFooter>
-                            </div>
-                        </Card>
-                    })} */}
-                </div>
-            </div>
         </div>
     );
 };

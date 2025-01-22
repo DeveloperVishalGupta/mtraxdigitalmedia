@@ -9,7 +9,6 @@ import { CarouselItem, services } from "@/model/constant";
 import Image from "next/image";
 
 function Home() {
-  // console.log(CarouselItem);
 
   return (
     <>
@@ -30,8 +29,6 @@ function Home() {
   );
 }
 Home.getLayout = (page) => {
-  console.log(page);
-
   return <Layout>{page}</Layout>
 }
 export default Home

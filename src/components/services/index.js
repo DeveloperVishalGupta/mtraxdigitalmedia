@@ -1,6 +1,6 @@
-import { services, spatikaServiceMenu } from '@/model/constant'
+import { services, spatikaServicCategories, spatikaServiceMenu } from '@/model/constant'
 // import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card, CardBody, CardFooter, } from "@nextui-org/react";
 import {
     Drawer,
@@ -10,45 +10,174 @@ import {
     DrawerFooter,
     Button,
     useDisclosure,
-    // Image,
+    Image,
     Link,
     Tooltip,
     Avatar,
     AvatarGroup,
+    Accordion, AccordionItem
 } from "@nextui-org/react";
-import Image from 'next/image';
+// import Image from 'next/image';
 import { NestedAccordion } from '../nestedAccordian';
 
 function Services() {
-    const allServices = spatikaServiceMenu.menu
-    const [selectedService, setSelectedService] = useState({})
+    const allServices = spatikaServiceMenu
+    const [selectedService, setSelectedService] = useState(null)
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
-    console.log(allServices);
+
+    // const renderAccordion = (key, value) => {
+    //     if (Array.isArray(value)) {
+    //         return (
+    //             <AccordionItem key={key} title={key}>
+    //                 <div>
+    //                     {value.map((item, index) => (
+    //                         <div key={index} style={{ marginBottom: "1rem" }}>
+    //                             <strong>{item.name}</strong>
+    //                             <br />
+    //                             {item.rate && (
+    //                                 <>
+    //                                     Rate: ₹{item.rate}
+    //                                     <br />
+    //                                 </>
+    //                             )}
+    //                             {item.members_rate && (
+    //                                 <>
+    //                                     Members Rate: ₹{item.members_rate}
+    //                                     <br />
+    //                                 </>
+    //                             )}
+    //                             {item.time && (
+    //                                 <>
+    //                                     Time: {item.time} minutes
+    //                                     <br />
+    //                                 </>
+    //                             )}
+    //                             {item.service && (
+    //                                 <>
+    //                                     Services:
+    //                                     <ul>
+    //                                         {item.service.map((service, i) => (
+    //                                             <li key={i}>{service}</li>
+    //                                         ))}
+    //                                     </ul>
+    //                                 </>
+    //                             )}
+    //                         </div>
+    //                     ))}
+    //                 </div>
+    //             </AccordionItem>
+    //         );
+    //     } else if (typeof value === "object" && value !== null) {
+    //         return (
+    //             <AccordionItem key={key} title={key} isCollapsed>
+    //                 <Accordion>
+    //                     {Object.entries(value).map(([nestedKey, nestedValue]) =>
+    //                         renderAccordion(nestedKey, nestedValue)
+    //                     )}
+    //                 </Accordion>
+    //             </AccordionItem>
+    //         );
+    //     } else {
+    //         return null;
+    //     }
+    // };
 
 
-    function renderArrayByKey(keyToCheck) {
-        if (keyToCheck in obj) {
-            return obj[keyToCheck];
+    const renderAccordion = (key, value) => {
+        if (Array.isArray(value)) {
+            return (
+                <AccordionItem key={key} title={key} isCollapsed>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+                        {value.map((item, index) => (
+                            <div
+                                key={index}
+                                style={{
+                                    border: "1px solid #ccc",
+                                    borderRadius: "8px",
+                                    padding: "1rem",
+                                    width: "300px",
+                                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                                }}
+                            >
+                                <strong>{item.name}</strong>
+                                <br />
+                                {item.rate && (
+                                    <>
+                                        Rate: ₹{item.rate}
+                                        <br />
+                                    </>
+                                )}
+                                {item.members_rate && (
+                                    <>
+                                        Members Rate: ₹{item.members_rate}
+                                        <br />
+                                    </>
+                                )}
+                                {item.time && (
+                                    <>
+                                        Time: {item.time} minutes
+                                        <br />
+                                    </>
+                                )}
+                                {item.service && (
+                                    <>
+                                        Services:
+                                        <ul>
+                                            {item.service.map((service, i) => (
+                                                <li key={i}>{service}</li>
+                                            ))}
+                                        </ul>
+                                    </>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </AccordionItem>
+            );
+        } else if (typeof value === "object" && value !== null) {
+            return (
+                <AccordionItem key={key} title={key} isCollapsed>
+                    <Accordion>
+                        {Object.entries(value).map(([nestedKey, nestedValue]) =>
+                            renderAccordion(nestedKey, nestedValue)
+                        )}
+                    </Accordion>
+                </AccordionItem>
+            );
         } else {
-            return `Key "${keyToCheck}" not found in object`;
+            return null;
+        }
+    };
+
+    function renderArrayByKey(key) {
+
+        if (key in allServices) {
+            console.log(allServices);
+
+            setSelectedService(allServices[key])
+
+        } else {
+            return `Key "${key}" not found in object`;
         }
     }
+
+    useEffect(() => {
+        if (selectedService) {
+            onOpen()
+        }
+    }, [selectedService])
+    console.log(selectedService);
 
     return (
         <div className='border bg-slate-200 mt-8 px-10 pt-16 pb-14'>
             <h1 className="text-3xl font-semibold mb-4 text-black">Services</h1>
 
-            <div className="gap-2 grid grid-cols-2 sm:grid-cols-4">
-                {allServices.categories.map((item, index) => {
-                    // console.log(item);
+            <div className="gap-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                {spatikaServicCategories.map((item, index) => {
 
-                    return <Card className='border p-4 relative group' key={index} isPressable shadow="sm"
+                    return <Card className='border p-2 relative group' key={index} isPressable shadow="sm"
                         onPress={() => {
-                            onOpen();
-                            setSelectedService(item)
-                            renderArrayByKey()
-                            console.log(item);
-
+                            renderArrayByKey(item.title)
                         }
                         }>
                         <div className=''>
@@ -59,14 +188,13 @@ function Services() {
                                         className="w-full object-cover"
                                         radius="lg"
                                         shadow="sm"
-                                        src={item.img}
-                                        width="100%"
+                                        src={item.image.src}
                                     />
                                 </div>
 
                             </CardBody>
-                            <CardFooter className="text-small justify-between">
-                                <b>{item.title}</b>
+                            <CardFooter className="text-small justify-between px-1 py-1">
+                                <p className='text-small font-medium '>{item.title}</p>
                                 <p className="text-default-500">{item.detail}</p>
                             </CardFooter>
                         </div>
@@ -218,26 +346,23 @@ function Services() {
                             </DrawerHeader>
                             <DrawerBody className="pt-16">
                                 <div className="flex w-full justify-center items-center pt-4">
-                                    <Image
-                                        // isBlurred
-                                        // isZoomed
-                                        alt="Event image"
-                                        className="aspect-square w-full rounded-2xl"
-                                        width={'100%'}
-                                        height={'auto'}
-                                        // height={300}
-                                        src={selectedService.img}
-                                    // src="https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/places/san-francisco.png"
-                                    />
+                                    <div className='border bg-slate-400 rounded-xl  h-52 w-1/2'></div>
+
                                 </div>
-                                <NestedAccordion data={spatikaServiceMenu} />
+
+
                                 <div className="flex flex-col gap-2 py-4">
-                                    <h1 className="text-2xl font-bold leading-7">SF Bay Area Meetup in November</h1>
-                                    <p className="text-sm text-default-500">
-                                        555 California St, San Francisco, CA 94103
+                                    <h1 className="text-xl text-center font-semibold  leading-7">
+                                        Total Beauty Care Under One Roof
+                                    </h1>
+                                    <p className="text-sm text-center text-default-500">
+                                        Comprehensive hair, skin, and grooming solutions tailored for you.
                                     </p>
+                                    <Accordion>
+                                        {Object.entries(selectedService).map(([key, value]) => renderAccordion(key, value))}
+                                    </Accordion>
                                     <div className="mt-4 flex flex-col gap-3">
-                                        <div className="flex gap-3 items-center">
+                                        {/* <div className="flex gap-3 items-center">
                                             <div className="flex-none border-1 border-default-200/50 rounded-small text-center w-11 overflow-hidden">
                                                 <div className="text-tiny bg-default-100 py-0.5 text-default-500">Nov</div>
                                                 <div className="flex items-center justify-center font-semibold text-medium h-6 text-default-500">
@@ -250,8 +375,8 @@ function Services() {
                                                 </p>
                                                 <p className="text-small text-default-500">5:00 PM - 9:00 PM PST</p>
                                             </div>
-                                        </div>
-                                        <div className="flex gap-3 items-center">
+                                        </div> */}
+                                        {/* <div className="flex gap-3 items-center">
                                             <div className="flex items-center justify-center border-1 border-default-200/50 rounded-small w-11 h-11">
                                                 <svg
                                                     className="text-default-500"
@@ -301,41 +426,8 @@ function Services() {
                                                 </Link>
                                                 <p className="text-small text-default-500">San Francisco, California</p>
                                             </div>
-                                        </div>
-                                        <div className="flex flex-col mt-4 gap-3 items-start">
-                                            <span className="text-medium font-medium">About the event</span>
-                                            <div className="text-medium text-default-500 flex flex-col gap-2">
-                                                <p>
-                                                    Hey Bay Area! We are excited to announce our next meetup on Tuesday,
-                                                    November 19th.
-                                                </p>
-                                                <p>
-                                                    Join us for an evening of insightful discussions and hands-on workshops
-                                                    focused on the latest developments in web development and design. Our
-                                                    featured speakers will share their experiences with modern frontend
-                                                    frameworks, responsive design patterns, and emerging web technologies.
-                                                    You&apos;ll have the opportunity to network with fellow developers and
-                                                    designers while enjoying refreshments and snacks.
-                                                </p>
-                                                <p>
-                                                    During the main session, we&apos;ll dive deep into practical examples of
-                                                    building scalable applications, exploring best practices for component
-                                                    architecture, and understanding advanced state management techniques. Our
-                                                    interactive workshop portion will let you apply these concepts directly,
-                                                    with experienced mentors available to provide guidance and answer your
-                                                    questions. Whether you&apos;re a seasoned developer or just starting your
-                                                    journey, you&apos;ll find valuable takeaways from this session.
-                                                </p>
+                                        </div> */}
 
-                                                <p className="mt-4">
-                                                    Brought to you by the{" "}
-                                                    <Link className="text-default-700" href="https://nextui.org">
-                                                        NextUI team
-                                                    </Link>
-                                                    .
-                                                </p>
-                                            </div>
-                                        </div>
                                         <div className="flex flex-col mt-4 gap-3 items-start">
                                             <span className="text-small text-default-500">Hosted By</span>
                                             <div className="flex gap-2 items-center">
@@ -344,7 +436,7 @@ function Services() {
                                                     size="sm"
                                                     src="https://nextui.org/android-chrome-192x192.png"
                                                 />
-                                                <span className="text-small text-default-500">NextUI Team</span>
+                                                <span className="text-small text-default-500">Spatika Team</span>
                                             </div>
                                         </div>
                                         <div className="flex flex-col mt-4 gap-3 items-start">
@@ -394,11 +486,9 @@ function Services() {
                                 </div>
                             </DrawerBody>
                             <DrawerFooter className="flex flex-col gap-1">
-                                <Link className="text-default-400" href="mailto:hello@nextui.org" size="sm">
-                                    Contact the host
-                                </Link>
-                                <Link className="text-default-400" href="mailto:hello@nextui.org" size="sm">
-                                    Report event
+                                <div className="text-default-600 text-sm">Contact the saloon</div>
+                                <Link className="text-default-400" href={`tel:8655165656`} size="sm">
+                                    8655165656
                                 </Link>
                             </DrawerFooter>
                         </>
