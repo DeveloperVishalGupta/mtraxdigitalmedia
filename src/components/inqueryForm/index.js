@@ -5,7 +5,7 @@ import { Form, Input, Button, Textarea } from "@nextui-org/react";
 const Query = () => {
     const [action, setAction] = useState(null);
     return (
-        <div className='px-10'>
+        <div className=''>
 
             <Form
                 className="w-full max-w-2xl mx-auto flex flex-col gap-6 rounded-0"

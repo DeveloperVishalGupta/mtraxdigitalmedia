@@ -18,9 +18,11 @@ function Home() {
       <div>
         <Services />
       </div>
-      <div className="py-16">
-        <h1 className="text-3xl pb-6 max-w-2xl mx-auto font-semibold mb-4 text-black">   Request a CallBack</h1>
-        <Query />
+      <div className="py-16 ">
+        <div className="w-1/2 mx-auto rounded-xl p-6 bg-[#00000040]">
+          <h1 className="text-3xl pb-6 max-w-2xl mx-auto font-semibold mb-4 text-black">   Request a CallBack</h1>
+          <Query />
+        </div>
       </div>
       <div>
         <AboutUs />

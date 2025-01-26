@@ -373,22 +373,27 @@ export const contactNumbers = [
 export const spatikaServicCategories = [
   {
     title: 'Haircare',
+    discription: 'Haircare services include cuts, styling, treatments, and care to maintain healthy, beautiful hair.',
     image: serviceCategoryHairCare
   },
   {
     title: 'Manicure/Pedicure',
+    discription: "Manicure/Pedicure services offer professional nail care, grooming, and relaxation for hands and feet.",
     image: serviceCategoryMenicure
   },
   {
     title: 'Spa',
+    discription: 'A rejuvenating experience offering relaxation, skincare, and wellness treatments for ultimate self-care.',
     image: serviceCategorySpa
   },
   {
     title: 'Skincare',
+    discription: 'Rejuvenating treatments tailored to nourish and enhance your skin\'s health and glow.',
     image: serviceCategorySkincare
   },
   {
     title: 'Waxing',
+    discription: 'Achieve smooth, hair-free skin with our professional waxing service for a flawless finish.',
     image: serviceCategoryWaxing
   },
 ]
@@ -1785,7 +1790,7 @@ export const spatikaServiceMenu = {
       ],
     }
   },
-  "MANICURE/PEDICURE": {
+  "Manicure/Pedicure": {
     "Nail Grooming": [
       {
         "name": "Cut and File",
