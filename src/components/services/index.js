@@ -20,6 +20,7 @@ import {
     ModalBody,
     ModalFooter,
 } from "@nextui-org/react";
+import Xmark from '@/assets/icons/xmark';
 
 function Services() {
     const serviceCategory = spatikaServicCategories
@@ -42,63 +43,6 @@ function Services() {
         onOpen: onModalOpen,
         onOpenChange: onModalOpenChange,
     } = useDisclosure();
-
-    // const renderAccordion = (key, value) => {
-    //     if (Array.isArray(value)) {
-    //         return (
-    //             <AccordionItem key={key} title={key}>
-    //                 <div>
-    //                     {value.map((item, index) => (
-    //                         <div key={index} style={{ marginBottom: "1rem" }}>
-    //                             <strong>{item.name}</strong>
-    //                             <br />
-    //                             {item.rate && (
-    //                                 <>
-    //                                     Rate: ₹{item.rate}
-    //                                     <br />
-    //                                 </>
-    //                             )}
-    //                             {item.members_rate && (
-    //                                 <>
-    //                                     Members Rate: ₹{item.members_rate}
-    //                                     <br />
-    //                                 </>
-    //                             )}
-    //                             {item.time && (
-    //                                 <>
-    //                                     Time: {item.time} minutes
-    //                                     <br />
-    //                                 </>
-    //                             )}
-    //                             {item.service && (
-    //                                 <>
-    //                                     Services:
-    //                                     <ul>
-    //                                         {item.service.map((service, i) => (
-    //                                             <li key={i}>{service}</li>
-    //                                         ))}
-    //                                     </ul>
-    //                                 </>
-    //                             )}
-    //                         </div>
-    //                     ))}
-    //                 </div>
-    //             </AccordionItem>
-    //         );
-    //     } else if (typeof value === "object" && value !== null) {
-    //         return (
-    //             <AccordionItem key={key} title={key} isCollapsed>
-    //                 <Accordion>
-    //                     {Object.entries(value).map(([nestedKey, nestedValue]) =>
-    //                         renderAccordion(nestedKey, nestedValue)
-    //                     )}
-    //                 </Accordion>
-    //             </AccordionItem>
-    //         );
-    //     } else {
-    //         return null;
-    //     }
-    // };
 
     function changeServiceIndex(type) {
         const currentServiceIndex = activeService.index
@@ -131,7 +75,7 @@ function Services() {
             console.log(key, value);
 
             return (
-                <AccordionItem onPress={onModalOpen} className='border-2 rounded-md bg-white mb-2 px-3 ' key={key} title={key} isCollapsed>
+                <AccordionItem onPress={onModalOpen} className='border-2 rounded-md bg-neutral-500 text-white font-semibold mb-2 px-3 ' key={key} title={key} isCollapsed>
 
                     <Modal size='4xl' isOpen={isModalOpen} onOpenChange={onModalOpenChange}>
                         <ModalContent>
@@ -141,6 +85,7 @@ function Services() {
                                     <ModalBody>
                                         <div className='overflow-scroll' style={{ maxHeight: '80vh', flexWrap: "wrap", gap: "1rem" }}>
                                             {value.map((item, index) => (
+
                                                 <div
                                                     key={index}
                                                     className='border-slate-200 border rounded-lg p-4 shadow-md mb-3'
@@ -190,8 +135,8 @@ function Services() {
             );
         } else if (typeof value === "object" && value !== null) {
             return (
-                <AccordionItem key={key} title={key} isCollapsed className='border-2 rounded-md bg-white mb-2 px-3 '>
-                    <Accordion>
+                <AccordionItem key={key} title={key} isCollapsed className='border-2 rounded-md bg-neutral-500 text-white  mb-2 px-3 '>
+                    <Accordion className='text-white font-semibold'>
                         {Object.entries(value).map(([nestedKey, nestedValue]) =>
                             renderAccordion(nestedKey, nestedValue)
                         )}
@@ -219,9 +164,7 @@ function Services() {
     console.log(selectedService);
 
     return (
-        <div className='border bg-slate-200 mt-8 px-10 pt-16 pb-14'>
-            <h1 className="text-3xl font-semibold mb-4 text-black">Services</h1>
-
+        <div className=''>
             <div className="gap-2 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
                 {serviceCategory.map((item, index) => {
 
@@ -252,7 +195,7 @@ function Services() {
 
                             </CardBody>
                             <CardFooter className="text-small justify-between px-1 py-1">
-                                <p className='text-small font-medium '>{item.title}</p>
+                                <p className='text-lg text-spatikaBlack font-medium '>{item.title}</p>
                                 <p className="text-default-500">{item.detail}</p>
                             </CardFooter>
                         </div>
@@ -284,26 +227,34 @@ function Services() {
                     </Card>
                 })}
             </div>
-            <Drawer
-                size='lg'
-                shadow='lg'
-                isDismissable={false}
-                hideCloseButton
-                backdrop="blur"
-                classNames={{
-                    base: "data-[placement=right]:sm:m-2 data-[placement=left]:sm:m-2  rounded-medium",
-                }}
+            <Modal
+                className='overflow-hidden'
                 isOpen={isDrawerOpen}
+                scrollBehavior='inside'
                 onOpenChange={onDrawerOpenChange}
+                size={'2xl'}
+                backdrop="blur"
+                isDismissable={false}
+                classNames={{
+                    base: "data-[placement=right]:sm:m-2 data-[placement=left]:sm:m-2 rounded-medium",
+                }}
             >
-                <DrawerContent>
+                <ModalContent >
                     {(onClose) => (
                         <>
-                            <DrawerHeader className="absolute top-0 inset-x-0 z-50 flex flex-row gap-2 px-2 py-2 border-default-200/50 justify-between bg-content1/50 backdrop-saturate-150 backdrop-blur-lg">
+                            <ModalHeader className="absolute top-0 inset-x-0 z-50 flex flex-row gap-2 px-2 py-2 border-default-200/50 justify-between bg-content1/50 backdrop-saturate-150 backdrop-blur-lg">
+
+                                <div className="gap-1 text-center">
+
+                                    <h1 className="text-xl font-semibold text-neutral-900 leading-7">
+                                        {activeService.title} Service
+                                    </h1>
+
+                                </div>
                                 <Tooltip content="Close">
                                     <Button
                                         isIconOnly
-                                        className="text-default-400"
+                                        className="text-neutral-900"
                                         size="sm"
                                         variant="light"
                                         onPress={() => {
@@ -311,26 +262,17 @@ function Services() {
                                             setSelectedService(null)
                                         }}
                                     >
-                                        <svg
-                                            fill="none"
-                                            height="20"
-                                            stroke="currentColor"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            viewBox="0 0 24 24"
-                                            width="20"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                        >
-                                            <path d="m13 17 5-5-5-5M6 17l5-5-5-5" />
-                                        </svg>
+                                        <Xmark />
                                     </Button>
                                 </Tooltip>
-                                <div className="flex gap-1 items-center">
+                            </ModalHeader>
+
+                            <ModalBody className="pt-14">
+                                <div className="flex w-full justify-between items-center pt-4">
                                     <Tooltip content="Previous">
                                         <Button
                                             isIconOnly
-                                            className="text-default-500"
+                                            className="text-white bg-neutral-700 -rotate-90"
                                             size="sm"
                                             variant="flat"
                                             onPress={() => {
@@ -352,10 +294,21 @@ function Services() {
                                             </svg>
                                         </Button>
                                     </Tooltip>
+                                    <div className='border bg-slate-400 rounded-xl h-auto w-[30%]'>
+                                        <Image
+                                            isZoomed
+                                            isBlurred
+                                            alt={activeService.title}
+                                            className="w-full object-cover"
+                                            radius="lg"
+                                            shadow="sm"
+                                            src={activeService.image.src}
+                                        />
+                                    </div>
                                     <Tooltip content="Next">
                                         <Button
                                             isIconOnly
-                                            className="text-default-500"
+                                            className="text-white bg-neutral-700 -rotate-90"
                                             size="sm"
                                             variant="flat"
                                             onPress={() => {
@@ -377,59 +330,14 @@ function Services() {
                                             </svg>
                                         </Button>
                                     </Tooltip>
-                                </div>
-                                <div className="w-full flex justify-end gap-2">
-                                    <Button
-                                        className="font-medium text-small text-default-500"
-                                        endContent={
-                                            <svg
-                                                fill="none"
-                                                height="16"
-                                                stroke="currentColor"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                viewBox="0 0 24 24"
-                                                width="16"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                            >
-                                                <path d="M7 17 17 7M7 7h10v10" />
-                                            </svg>
-                                        }
-                                        size="sm"
-                                        variant="flat"
-                                    >
-                                        All Services
-                                    </Button>
-                                </div>
-
-                            </DrawerHeader>
-                            <DrawerBody className="pt-16">
-                                <div className="flex w-full justify-center items-center pt-4">
-                                    <div className='border bg-slate-400 rounded-xl h-auto w-2/5'>
-                                        <Image
-                                            isZoomed
-                                            isBlurred
-                                            alt={activeService.title}
-                                            className="w-full object-cover"
-                                            radius="lg"
-                                            shadow="sm"
-                                            src={activeService.image.src}
-                                        />
-                                    </div>
 
 
                                 </div>
-
-
-                                <div className="flex flex-col gap-2 pt-4">
-                                    <h1 className="text-xl text-center font-semibold  leading-7">
-                                        {activeService.title} Service
-                                    </h1>
-                                    <p className="text-sm text-center text-default-500">
-                                        {activeService.discription}
-                                    </p>
-                                    <Accordion className='servicesAccordian border-2 pt-2 rounded-lg bg-slate-100'>
+                                <p className="text-neutral-500 text-base">
+                                    {activeService.discription}
+                                </p>
+                                <div className="flex flex-col gap-2 pt-2">
+                                    <Accordion className='servicesAccordian border-2 pt-2 rounded-lg bg-neutral-700 '>
                                         {Object.entries(selectedService).map(([key, value]) => renderAccordion(key, value))}
                                     </Accordion>
                                     <div className="mt-4 flex flex-col gap-3">
@@ -555,19 +463,17 @@ function Services() {
                                         </div> */}
                                     </div>
                                 </div>
-                            </DrawerBody>
-                            <DrawerFooter className="flex flex-col gap-1">
+                            </ModalBody>
+                            {/* <ModalFooter className="flex flex-col gap-1">
                                 <div className="text-default-600 text-sm">Contact the saloon</div>
                                 <Link className="text-default-400" href={`tel:8655165656`} size="sm">
                                     8655165656
                                 </Link>
-                            </DrawerFooter>
+                            </ModalFooter> */}
                         </>
                     )}
-                </DrawerContent>
-            </Drawer>
-
-
+                </ModalContent>
+            </Modal>
         </div >
     )
 }

@@ -12,7 +12,16 @@ module.exports = {
   theme: {
     colors: {
       ...colors,
-      green: '#1ab293'
+      green: '#1ab293',
+      spatikaBlack: '#050505',
+      spatikaDarkRed: '#610C27',
+      spatikaDarkRed600: '#d52d6b',
+      spatikaWarmGrey: '#AC9C8D',
+      spatikalightPink: '#E3C1B4',
+      spatikaOffWhite: '#DDD9CE',
+      spatikaelightGray: '#EFECE9',
+      spatikaelightGray200: '#dbd3cd',
+      spatikaelightGrayTransparent: '#efece982'
 
     },
     extend: {},

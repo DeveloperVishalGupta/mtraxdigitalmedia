@@ -33,39 +33,165 @@ import serviceCategoryMenicure from '@/assets/images/servises/menicure.jpg'
 import serviceCategorySpa from '@/assets/images/servises/spa.png'
 import serviceCategorySkincare from '@/assets/images/servises/skincare.jpg'
 import serviceCategoryWaxing from '@/assets/images/servises/waxing.jpg'
+import tm1 from '@/assets/images/team/tm1.jpg'
+import tm2 from '@/assets/images/team/tm2.jpg'
+import tm3 from '@/assets/images/team/tm3.jpg'
+import tm4 from '@/assets/images/team/tm4.jpg'
+import tm5 from '@/assets/images/team/tm5.jpg'
+import tm6 from '@/assets/images/team/tm6.jpg'
+import tm7 from '@/assets/images/team/tm7.jpg'
+import Icons from '../icons'
+import Explosion from '@/assets/icons/explosion'
+import ReactIcon from '@/assets/icons/reactIcon'
+import Crown from '@/assets/icons/crown'
+import { image } from '@nextui-org/react'
 
 
 
 
-export function NavMenus() {
-  return [
-    {
-      title: "HOME",
-      href: "/home",
-      active: true,
-    },
-    {
-      title: "category",
-      href: "/category",
-      active: true,
-    },
-    {
-      title: "cart",
-      href: "/cart",
-      active: false,
-    },
-    {
-      title: "Favorite",
-      href: "/favorite",
-      active: false,
-    },
-    {
-      title: "CONNECT US",
-      href: "/connect_us",
-      active: false,
-    },
-  ];
-}
+export const NavMenus = [
+  {
+    title: "Home",
+    href: "#",
+    active: true,
+  },
+  {
+    title: "About",
+    href: "#",
+    active: true,
+  },
+  {
+    title: "Services",
+    href: "#",
+    active: false,
+  },
+  // {
+  //   title: "Gallery",
+  //   href: "#",
+  //   active: false,
+  // },
+  {
+    title: "Team",
+    href: "#",
+    active: false,
+  },
+  {
+    title: "Testimonial",
+    href: "#",
+    active: false,
+  },
+  {
+    title: "Contact",
+    href: "#",
+    active: false,
+  },
+
+];
+
+export const aboutSpatikaPoints = [
+  {
+    title: "Certified Professionals",
+    discribe: "Our team consists of highly trained and certified beauty experts.",
+    icon: <Explosion color={'#f43f5e '} height={16} width={16} />
+  },
+  {
+    title: "Premium Products",
+    discribe: "We use only the highest quality beauty and skincare products.",
+    icon: <Crown color={'#f43f5e '} height={16} width={16} />
+  },
+  {
+    title: "Luxurious Environment",
+    discribe: "Experience beauty treatments in our peaceful and elegant salon.",
+    icon: <ReactIcon color={'#f43f5e '} height={16} width={16} />
+  },
+];
+
+export const aboutSpatikaFigure = [
+  {
+    title: "Years Experience",
+    figure: "10+",
+  },
+  {
+    title: "Client Satisfaction",
+    figure: "98%",
+  },
+  {
+    title: "Services Delivered",
+    figure: "5000+",
+  },
+  {
+    title: "Team Members",
+    figure: "15+",
+  },
+];
+
+export const spatikaTeam = [
+  {
+    name: "Alice Johnson",
+    role: "Hair Stylist",
+    experience: 5,
+    description: "Expert in trendy cuts and styling with 5 years of experience.",
+    image: tm1
+  },
+  {
+    name: "Bob Smith",
+    role: "Makeup Artist",
+    experience: 7,
+    description: "Specializes in bridal and event makeup with 7 years of expertise.",
+    image: tm2
+  },
+  {
+    name: "Charlie Davis",
+    role: "Nail Technician",
+    experience: 4,
+    description: "Skilled in nail art and manicures with 4 years of practice.",
+    image: tm3
+  },
+  {
+    name: "David Wilson",
+    role: "Massage Therapist",
+    experience: 6,
+    description: "Provides relaxing and therapeutic massages with 6 years in the field.",
+    image: tm4
+
+  },
+  {
+    name: "Emma Brown",
+
+
+    role: "Hair Colorist",
+
+    experience: 8,
+    description: "Master in balayage and creative coloring with 8 years of experience.",
+    image: tm5
+
+  },
+  {
+    name: "Franklin Harris",
+    role: "Barber",
+    experience: 10,
+    description: "Precision cuts and grooming specialist with a decade of experience.",
+    image: tm6
+
+  },
+  {
+    name: "Grace Miller",
+    role: "Skin Care Specialist",
+    experience: 3,
+    description: "Offers facials and skin treatments with 3 years in skincare.",
+    image: tm7
+
+  },
+];
+
+export const testimonials = [
+  { name: "Rahul Gupta", review: "Amazing service and friendly staff! Highly recommended. Amazing service and friendly staff! Highly recommended. Amazing service and friendly staff! Highly recommended.", stars: 5 },
+  { name: "Neha Kapoor", review: "Loved the hair color transformation. Will visit again!", stars: 4 },
+  { name: "Arjun Desai", review: "Professional and skilled team. Very satisfied!", stars: 5 },
+  { name: "Sneha Rao", review: "Great experience with bridal makeup. It was flawless!", stars: 5 },
+  { name: "Manoj Tiwari", review: "Good services but waiting time was a bit long.", stars: 4 },
+];
+
 
 export const CarouselItem = [
   {
