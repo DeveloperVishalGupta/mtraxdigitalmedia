@@ -4,7 +4,7 @@ import React from 'react'
 
 function Spatika() {
     return (
-        <section id="Spatika" className="bg-neutral-900 min-h-[70vh]">
+        <section id="Spatika" className="bg-neutral-900 min-h-[70vh] border">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
                 <div className="flex flex-col md:flex-row items-center justify-between h-full py-16">
                     <div className="w-full md:w-1/2 space-y-8 animate__animated animate__fadeInLeft">
@@ -40,11 +40,17 @@ function Spatika() {
                     <div className="w-full md:w-1/2 mt-12 md:mt-0 animate__animated animate__fadeInRight">
                         <div className="relative">
                             <div className="absolute -inset-1 bg-rose-500 rounded-lg blur opacity-30"></div>
-                            <div className="relative bg-neutral-800 rounded-lg p-8">
-                                <div className="grid grid-cols-2 gap-4">
+                            <div className="relative bg-neutral-800 rounded-lg p-4 md:p-8">
+                                <div className="grid grid-cols-1 gap-4">
                                     {
                                         spatikaServicCategories.map((item, index) => {
+                                            // return <div className="bg-neutral-700 rounded-lg p-4 hover:bg-neutral-600 transition-colors">
+                                            //     <h3 className="text-xl font-semibold text-rose-500">{item.title}</h3>
+                                            //     <p className="text-gray-300">{item.discription}</p>
+                                            // </div>
                                             if (spatikaServicCategories.length - 1 !== index) {
+                                                console.log('not ;ast, ', index);
+
                                                 return (
                                                     <div className="bg-neutral-700 rounded-lg p-4 hover:bg-neutral-600 transition-colors">
                                                         <h3 className="text-xl font-semibold text-rose-500">{item.title}</h3>
@@ -53,7 +59,7 @@ function Spatika() {
                                                 )
                                             } else {
                                                 return (
-                                                    <div className="bg-neutral-700 col-span-2 rounded-lg p-4 hover:bg-neutral-600 transition-colors">
+                                                    <div className="bg-neutral-700 md:col-span-2 rounded-lg p-4 hover:bg-neutral-600 transition-colors">
                                                         <h3 className="text-xl font-semibold text-rose-500">{item.title}</h3>
                                                         <p className="text-gray-300">{item.discription}</p>
                                                     </div>

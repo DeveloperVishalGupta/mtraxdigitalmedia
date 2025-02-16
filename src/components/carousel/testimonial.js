@@ -14,6 +14,32 @@ function TestimonialCarousel({ data }) {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
     const generateStars = (count) => {
         return "★".repeat(count) + "☆".repeat(5 - count);
@@ -26,7 +52,6 @@ function TestimonialCarousel({ data }) {
             <Slider {...settings}>
                 {data.map((item, index) => {
                     return <div key={index} className="" >
-                        {/* <Image alt="image" src={item.image} className="w-11/12 h-full mx-auto" /> */}
                         <div class="testimonial-item w-full flex-shrink-0 px-4">
                             <div class="bg-neutral-800 rounded-xl p-8 min-h-[236px]">
                                 <div class="flex items-center mb-6">
@@ -37,7 +62,6 @@ function TestimonialCarousel({ data }) {
                                         <h4 class="text-white font-semibold">{item.name}</h4>
                                     </div>
                                 </div>
-                                {/* <p class="text-gray-300 mb-6 line-clamp-3">`{`"${item.review}"`}</p> */}
                                 <p className="text-gray-300">
                                     {expandedReviews[index] || item.review.length <= 110
                                         ? `"${item.review}"`

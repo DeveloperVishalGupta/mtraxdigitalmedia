@@ -4,25 +4,28 @@ import {
     NavbarContent,
     NavbarItem,
     Link,
-    Image,
-    Button
 } from "@nextui-org/react";
 import Spatika from '@/assets/images/logo.png'
 import { NavMenus } from "@/model/constant";
+import Image from "next/image";
+import SpatikaLogo from "@/assets/images/SVG/headerlogo.svg";
+import Bars from "@/assets/icons/bars";
 
 export default function Header() {
     return (
-        <Navbar className="h-[4.5rem] w-full spatikaHeader px-12 ">
-            <NavbarBrand  >
-                <div className="h-16 flex justify-start items-center">
+        <Navbar className="h-[4.5rem] w-full spatikaHeader md:px-12 static">
+            <NavbarBrand className="order-2 md:order-1 justify-end md:justify-start" >
+                <div className="h-16  flex justify-start items-center">
+                    {/* <SpatikaLogo className="h-20 w-fit" /> */}
                     <Image
-                        className="h-20"
+                        loading="lazy"
+                        className="h-20 w-fit"
                         alt="Spatika.com"
-                        src={Spatika.src}
+                        src={Spatika}
                     />
                 </div>
             </NavbarBrand>
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
+            <NavbarContent className="hidden sm:flex gap-4 md:order-2" justify="center">
                 {
                     NavMenus.map((item, index) => {
                         return (
@@ -35,12 +38,35 @@ export default function Header() {
                     })
                 }
                 <NavbarItem>
-                    <Button
-                        className="rounded-md bg-rose-500 hover:bg-rose-600 text-white font-medium py-1 h-9"
+                    <Link
+                        className="rounded-md bg-rose-500 px-3 hover:bg-rose-600 text-white font-medium py-1 h-9"
                         radius="full"
+                        href="#booking"
                     >
                         Book Now
-                    </Button>
+                    </Link>
+                </NavbarItem>
+            </NavbarContent>
+            <NavbarContent className="md:hidden" justify="center">
+                {/* {
+                    NavMenus.map((item, index) => {
+                        return (
+                            <NavbarItem>
+                                <Link className="font-medium text-gray-900  hover:text-rose-500 bottom-b" color="foreground" href={item.href}>
+                                    {item.title}
+                                </Link>
+                            </NavbarItem>
+                        )
+                    })
+                } */}
+                <NavbarItem>
+                    <Link
+                        className="rounded-md bg-rose-500 px-3 hover:bg-rose-600 text-white font-medium py-1 h-9"
+                        radius="full"
+                        href="#services"
+                    >
+                        <Bars />
+                    </Link>
                 </NavbarItem>
             </NavbarContent>
         </Navbar >

@@ -1,16 +1,7 @@
-import contactPage from '@/assets/images/HeaderCarousel/contactPage.jpg'
-import coverPage from '@/assets/images/HeaderCarousel/coverPage.jpg'
-import embeddedLink from '@/assets/images/HeaderCarousel/embeddedLink.jpg'
-import ownerPage from '@/assets/images/HeaderCarousel/ownerPage.jpg'
+
 import product1 from '@/assets/images/HeaderCarousel/product1.png'
 import product2 from '@/assets/images/HeaderCarousel/product2.jpg'
 import product3 from '@/assets/images/HeaderCarousel/product3.jpg'
-import product4 from '@/assets/images/HeaderCarousel/product4.jpg'
-import product5 from '@/assets/images/HeaderCarousel/product5.jpg'
-import productIntro1 from '@/assets/images/HeaderCarousel/productIntro1.jpg'
-import productIntro from '@/assets/images/HeaderCarousel/productIntro.jpg'
-import quote from '@/assets/images/HeaderCarousel/quote.jpg'
-import service1 from '@/assets/images/service1.png'
 import AnitaAromatic from '@/assets/images/partner/AnitaAromatic.png'
 import ArganQOD from '@/assets/images/partner/ArganQOD.png'
 import BrazilianHairtech from '@/assets/images/partner/BrazilianHairtech.png'
@@ -26,8 +17,6 @@ import RemyLaure from '@/assets/images/partner/RemyLaure.png'
 import Richfeel from '@/assets/images/partner/Richfeel.png'
 import Spatika from '@/assets/images/partner/Spatika.png'
 import WellaProfessional from '@/assets/images/partner/WellaProfessional.png'
-import { time } from 'framer-motion'
-// import { serviceCategoryHairCare } from './image'
 import serviceCategoryHairCare from '@/assets/images/servises/hairCare.jpg'
 import serviceCategoryMenicure from '@/assets/images/servises/menicure.jpg'
 import serviceCategorySpa from '@/assets/images/servises/spa.png'
@@ -40,29 +29,24 @@ import tm4 from '@/assets/images/team/tm4.jpg'
 import tm5 from '@/assets/images/team/tm5.jpg'
 import tm6 from '@/assets/images/team/tm6.jpg'
 import tm7 from '@/assets/images/team/tm7.jpg'
-import Icons from '../icons'
 import Explosion from '@/assets/icons/explosion'
 import ReactIcon from '@/assets/icons/reactIcon'
 import Crown from '@/assets/icons/crown'
-import { image } from '@nextui-org/react'
-
-
-
 
 export const NavMenus = [
   {
     title: "Home",
-    href: "#",
+    href: "#Spatika",
     active: true,
   },
   {
     title: "About",
-    href: "#",
+    href: "#about",
     active: true,
   },
   {
     title: "Services",
-    href: "#",
+    href: "#services",
     active: false,
   },
   // {
@@ -71,18 +55,19 @@ export const NavMenus = [
   //   active: false,
   // },
   {
-    title: "Team",
-    href: "#",
+    title: "Testimonial",
+    href: "#testimonials",
     active: false,
   },
   {
-    title: "Testimonial",
-    href: "#",
+    title: "Team",
+    href: "#team",
     active: false,
   },
+
   {
     title: "Contact",
-    href: "#",
+    href: "#contact",
     active: false,
   },
 
@@ -191,210 +176,6 @@ export const testimonials = [
   { name: "Sneha Rao", review: "Great experience with bridal makeup. It was flawless!", stars: 5 },
   { name: "Manoj Tiwari", review: "Good services but waiting time was a bit long.", stars: 4 },
 ];
-
-
-export const CarouselItem = [
-  {
-    // heading: 'flat 30% off',
-    // subeading: '+20% poits get back',
-    btnText: 'Explore Now',
-    image: product1,
-    _id: 1,
-    isShow: true
-  },
-  {
-    heading: 'flat 10% off',
-    subeading: '+20% poits get back',
-    btnText: 'Explore Now',
-    image: product2,
-    _id: 1,
-    isShow: true
-  },
-  {
-    heading: 'flat 40% off',
-    subeading: '+10% poits get back',
-    btnText: 'Explore Now',
-    image: product3,
-    _id: 1,
-    isShow: true
-  },
-]
-
-export const services = [
-  {
-    "title": "Car Wash",
-    "img": service1,
-    "detail": "Premium Car Wash Services",
-    "subServices": [
-      {
-        "serviceName": "Exterior Wash",
-        "priceRange": "$20",
-        "timeRequired": "30 minutes",
-        "subServices": [
-          {
-            "serviceName": "Hand Wash",
-            "priceRange": "$10",
-            "timeRequired": "15 minutes"
-          },
-          {
-            "serviceName": "Wax Coating",
-            "priceRange": "$15",
-            "timeRequired": "20 minutes"
-          }
-        ]
-      },
-      {
-        "serviceName": "Interior Cleaning",
-        "priceRange": "$30",
-        "timeRequired": "45 minutes",
-        "subServices": [
-          {
-            "serviceName": "Vacuum Cleaning",
-            "priceRange": "$10",
-            "timeRequired": "20 minutes"
-          },
-          {
-            "serviceName": "Seat Shampoo",
-            "priceRange": "$15",
-            "timeRequired": "25 minutes"
-          }
-        ]
-      },
-      {
-        "serviceName": "Full Wash",
-        "priceRange": "$50",
-        "timeRequired": "1 hour"
-      }
-    ]
-  },
-  {
-    "title": "Home Cleaning",
-    "img": service1,
-    "detail": "Professional Home Cleaning",
-    "subServices": [
-      {
-        "serviceName": "Kitchen Cleaning",
-        "priceRange": "$25",
-        "timeRequired": "1 hour",
-        "subServices": [
-          {
-            "serviceName": "Dishwashing",
-            "priceRange": "$10",
-            "timeRequired": "30 minutes"
-          },
-          {
-            "serviceName": "Stove Scrubbing",
-            "priceRange": "$15",
-            "timeRequired": "30 minutes"
-          }
-        ]
-      },
-      {
-        "serviceName": "Bathroom Cleaning",
-        "priceRange": "$20",
-        "timeRequired": "45 minutes"
-      },
-      {
-        "serviceName": "Full House Cleaning",
-        "priceRange": "$100",
-        "timeRequired": "3 hours",
-        "subServices": [
-          {
-            "serviceName": "Floor Mopping",
-            "priceRange": "$30",
-            "timeRequired": "1 hour"
-          },
-          {
-            "serviceName": "Dusting",
-            "priceRange": "$20",
-            "timeRequired": "1 hour"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Salon Services",
-    "img": service1,
-    "detail": "At-Home Beauty Services",
-    "subServices": [
-      {
-        "serviceName": "Haircut",
-        "priceRange": "$15",
-        "timeRequired": "30 minutes"
-      },
-      {
-        "serviceName": "Facial",
-        "priceRange": "$40",
-        "timeRequired": "1 hour",
-        "subServices": [
-          {
-            "serviceName": "Basic Facial",
-            "priceRange": "$25",
-            "timeRequired": "30 minutes"
-          },
-          {
-            "serviceName": "Advanced Facial",
-            "priceRange": "$50",
-            "timeRequired": "1 hour"
-          }
-        ]
-      },
-      {
-        "serviceName": "Manicure & Pedicure",
-        "priceRange": "$35",
-        "timeRequired": "1.5 hours"
-      }
-    ]
-  },
-  {
-    "title": "Car Wash",
-    "img": service1,
-    "detail": "Premium Car Wash Services",
-    "subServices": [
-      {
-        "serviceName": "Exterior Wash",
-        "priceRange": "$20",
-        "timeRequired": "30 minutes",
-        "subServices": [
-          {
-            "serviceName": "Hand Wash",
-            "priceRange": "$10",
-            "timeRequired": "15 minutes"
-          },
-          {
-            "serviceName": "Wax Coating",
-            "priceRange": "$15",
-            "timeRequired": "20 minutes"
-          }
-        ]
-      },
-      {
-        "serviceName": "Interior Cleaning",
-        "priceRange": "$30",
-        "timeRequired": "45 minutes",
-        "subServices": [
-          {
-            "serviceName": "Vacuum Cleaning",
-            "priceRange": "$10",
-            "timeRequired": "20 minutes"
-          },
-          {
-            "serviceName": "Seat Shampoo",
-            "priceRange": "$15",
-            "timeRequired": "25 minutes"
-          }
-        ]
-      },
-      {
-        "serviceName": "Full Wash",
-        "priceRange": "$50",
-        "timeRequired": "1 hour"
-      }
-    ]
-  },
-
-]
 
 export const aboutSalon = `Established in the year 2007, Spatika Spa & Salon in Chembur East, Mumbai is 
 a top player in the category Unisex Beauty Parlours in the Mumbai. This well-known establishment acts as a one-stop

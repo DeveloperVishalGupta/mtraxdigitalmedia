@@ -1,64 +1,111 @@
 import React, { useState } from "react";
-// import axios from "axios";
-// import emailjs from "emailjs-com";
+// import emailjs from "@emailjs/browser";
+
+import emailjs from '@emailjs/browser'
+import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from "@heroui/modal";
+import { Button } from "@heroui/button";
+import WhatsappIcon from "@/assets/icons/whatsapp";
+import { Link } from "@heroui/link";
+// import mailjs from 'mai'
 
 const BookingForm = () => {
     const [formData, setFormData] = useState({
-        name: "Rohini Jain",
-        email: "rohini@example.com",
-        phone: "+911234567890",  // Ensure country code is included
-        service: "haircut",
-        notes: "Please use organic products.",
+        name: "",
+        email: "",
+        phone: "",
+        service: "",
     });
+    const [isValid, setIsValid] = useState(false)
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
+    const message = encodeURIComponent(
+        `Hello!! Spatika 👋  
+      
+      I’d like to book an appointment for *${formData.service}*. Could you please provide me with more details?  
+      
+      Here’s my contact info:  
+      📞 *Phone:* ${formData.phone}  
+      📧 *Email:* ${formData.email}  
+      
+      Looking forward to your response. Thanks! 😊`
+    );
+    const whatsappUrl = `https://wa.me/919004101806?text=${message}`;
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        // ✅ WhatsApp API Request
-        try {
-            await axios.post(
-                "https://graph.facebook.com/v19.0/YOUR_PHONE_NUMBER_ID/messages",
-                {
-                    messaging_product: "whatsapp",
-                    to: formData.phone,
-                    type: "text",
-                    text: { body: `Hello ${formData.name}, your appointment for ${formData.service} is booked!` },
+        const templateParams = {
+            user_name: formData.name,
+            user_email: formData.email,
+            user_phone: formData.phone,
+            selected_service: formData.service,
+        };
+
+        emailjs
+            .sendForm(
+                "service_gufy53j",  // Replace with actual Service ID
+                "template_axz6j8l", // Replace with actual Template ID
+                templateParams,           // Form reference
+                "wzomne5c6xqcdEf4D"   // Replace with actual Public Key from EmailJS
+            )
+            .then(
+                (result) => {
+                    console.log("Email sent successfully:", result.text);
+                    setIsValid(true)
+                    isOpen()
                 },
-                {
-                    headers: {
-                        Authorization: `Bearer ${process.env.REACT_APP_WHATSAPP_ACCESS_TOKEN}`,
-                        "Content-Type": "application/json",
-                    },
+                (error) => {
+                    console.log("Email sending failed:", error.text);
+                    setIsValid(false)
+                    isOpen()
                 }
             );
-            console.log("WhatsApp message sent!");
-        } catch (error) {
-            console.error("WhatsApp API Error:", error.response?.data || error.message);
-        }
-
-        // ✅ EmailJS Email Sending
-        try {
-            await emailjs.send(
-                process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-                {
-                    user_name: formData.name,
-                    user_email: formData.email,
-                    user_phone: formData.phone,
-                    user_service: formData.service,
-                    user_notes: formData.notes,
-                },
-                process.env.REACT_APP_EMAILJS_USER_ID
-            );
-            console.log("Email sent successfully!");
-        } catch (error) {
-            console.error("EmailJS Error:", error);
-        }
     };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+
+    //     const templateParams = {
+    //         name: formData.name,
+    //         email: formData.email,
+    //         phone: formData.phone,
+    //         service: formData.service,
+    //     };
+
+    //     // Send email to Admin
+    //     emailjs
+    //         .send(
+    //             "service_gufy53j", // Replace with your EmailJS Service ID
+    //             "template_k32r4dn", // Replace with EmailJS Admin Template ID
+    //             templateParams,
+    //             "wzomne5c6xqcdEf4D" // Replace with your EmailJS Public Key
+    //         )
+    //         .then((response) => {
+    //             console.log("Admin email sent successfully!", response);
+
+    //             // After admin email, send confirmation to user
+    //             emailjs
+    //                 .send(
+    //                     "service_gufy53j", // Same Service ID
+    //                     "template_axz6j8l", // Replace with EmailJS User Template ID
+    //                     templateParams,
+    //                     "wzomne5c6xqcdEf4D"
+    //                 )
+    //                 .then((userResponse) => {
+    //                     console.log("User email sent successfully!", userResponse);
+    //                     alert("Booking request submitted successfully!");
+    //                 })
+    //                 .catch((error) => {
+    //                     console.error("Failed to send user confirmation email:", error);
+    //                 });
+    //         })
+    //         .catch((error) => {
+    //             console.error("Failed to send admin email:", error);
+    //             alert("Failed to send booking request.");
+    //         });
+    // };
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6 text-white">
@@ -112,12 +159,12 @@ const BookingForm = () => {
                     required
                 >
                     <option value="">Choose a service</option>
-                    <option value="haircut">Haircut & Styling</option>
-                    <option value="color">Hair Coloring</option>
-                    <option value="treatment">Hair Treatment</option>
-                    <option value="makeup">Makeup Service</option>
-                    <option value="spa">Spa Treatment</option>
-                    <option value="nails">Nail Care</option>
+                    <option value="Haircut & Styling">Haircut & Styling</option>
+                    <option value="Hair Coloring">Hair Coloring</option>
+                    <option value="Hair Treatment">Hair Treatment</option>
+                    <option value="Makeup Service">Makeup Service</option>
+                    <option value="Spa Treatment">Spa Treatment</option>
+                    <option value="Nail Care">Nail Care</option>
                 </select>
             </div>
 
@@ -127,6 +174,43 @@ const BookingForm = () => {
             >
                 Book Appointment
             </button>
+
+            <Link
+                href={whatsappUrl}
+                className="text-neutral-400 hover:text-pink-500 w-full flex flex-col items-start "
+                target="_blank"
+                rel="noopener noreferrer"
+                isDisabled={formData.email && formData.phone ? false : true}
+            >
+                <button
+                    type="button"
+                    className="w-full flex justify-center items-center bg-rose-500 mt-4 text-white py-3 rounded-lg hover:bg-rose-600 transition-colors"
+                >
+                    <span className="me-2">Book Appointment on WhatsApp</span> <WhatsappIcon width={26} height={26} />
+                </button>
+                <p className="text-xs text-neutral-300 m-0"> Fill out the form above to activate this button.</p>
+            </Link>
+
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+                <ModalContent>
+                    {(onClose) => (
+                        <>
+                            <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
+                            <ModalBody>
+                                {isValid
+                                    ? <p>Thank you for reaching out! Our team will contact you as soon as possible if you have provided the correct details.</p>
+                                    : <p>Please fill in the correct details so we can assist you promptly.</p>
+                                }
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="danger" variant="light" onPress={onClose}>
+                                    Close
+                                </Button>
+                            </ModalFooter>
+                        </>
+                    )}
+                </ModalContent>
+            </Modal>
         </form>
     );
 };

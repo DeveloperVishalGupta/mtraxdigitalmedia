@@ -1,10 +1,12 @@
 import React from 'react'
 import BookingForm from '../BookingForm'
 import SectionHeading from '../sectionHeading'
+import WhatsappIcon from '@/assets/icons/whatsapp'
+import Link from 'next/link'
 
 function Appointment() {
     return (
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-fit">
             <SectionHeading heading={'Book Your Appointment'} headingText={'Schedule your transformation today'} />
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -16,6 +18,22 @@ function Appointment() {
                 {/* Booking Information  */}
 
                 <div class="space-y-8 animate__animated animate__fadeInRight">
+                    {/* Booking on WhatsApp */}
+                    <div class="bg-neutral-100 rounded-xl p-8">
+                        <h3 class="text-2xl font-bold text-neutral-900 mb-4">Appointment on WhatsApp</h3>
+                        <p class="text-neutral-600 mb-6">Easily Book Your Appointment with Us!</p>
+                        <div class="space-y-4">
+                            <Link
+                                href="https://wa.me/919004101806?text=Hello,%20I'm%20interested%20to%20book%20your%20service.%20Can%20you%20explain%20the%20price?"
+                                className="text-neutral-600 hover:text-pink-500 flex"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <WhatsappIcon width={26} height={26} />
+                                <span className='mx-2'>+91 9004101806</span>
+                            </Link>
+                        </div>
+                    </div>
                     <div class="bg-neutral-100 rounded-xl p-8">
                         <h3 class="text-2xl font-bold text-neutral-900 mb-4">Booking Information</h3>
                         <ul class="space-y-4">

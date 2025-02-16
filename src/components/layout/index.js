@@ -1,20 +1,16 @@
 import React from 'react'
 import Header from '../header';
 import Footer from '../footer';
-import Navbar from '@/newComponents/navbar';
-// import Header from '../header'
-// import NewHeader from '../newHeader';
+import ScrollToTop from '../ScrollToTop';
 
 function Layout({ children }) {
 
     return (
-        <div>
-            {/* <Navbar /> */}
+        <div className='relative'>
             <Header />
-            {/* <NewHeader /> */}
             <div>{children}</div>
             <Footer />
-
+            <ScrollToTop />
         </div>
     )
 }

@@ -1,26 +1,18 @@
-import { services, spatikaServicCategories, spatikaServiceMenu } from '@/model/constant'
-// import Image from 'next/image'
+import { spatikaServicCategories, spatikaServiceMenu } from '@/model/constant'
 import React, { useEffect, useState } from 'react'
-import { Card, CardBody, CardFooter, image, } from "@nextui-org/react";
+import { Card, CardBody, CardFooter } from "@nextui-org/react";
 import {
-    Drawer,
-    DrawerContent,
-    DrawerHeader,
-    DrawerBody,
-    DrawerFooter,
     Button,
     useDisclosure,
-    Image,
-    Link,
     Tooltip,
     Accordion, AccordionItem,
     Modal,
     ModalContent,
     ModalHeader,
     ModalBody,
-    ModalFooter,
 } from "@nextui-org/react";
 import Xmark from '@/assets/icons/xmark';
+import Image from 'next/image';
 
 function Services() {
     const serviceCategory = spatikaServicCategories
@@ -49,17 +41,13 @@ function Services() {
         let changeIndex = currentServiceIndex;
         if (type === 1) {
             changeIndex = currentServiceIndex + 1;
-
-            // Ensure it does not exceed the maximum index
             if (changeIndex >= serviceCategory.length) {
-                changeIndex = 0; // Optionally wrap around to the first index
+                changeIndex = 0;
             }
         } else {
             changeIndex = currentServiceIndex - 1;
-
-            // Ensure it does not go below 0
             if (changeIndex < 0) {
-                changeIndex = serviceCategory.length - 1; // Optionally wrap around to the last index
+                changeIndex = serviceCategory.length - 1;
             }
         }
         setActiveService({
@@ -72,11 +60,8 @@ function Services() {
     }
     const renderAccordion = (key, value) => {
         if (Array.isArray(value)) {
-            console.log(key, value);
-
             return (
                 <AccordionItem onPress={onModalOpen} className='border-2 rounded-md bg-neutral-500 text-white font-semibold mb-2 px-3 ' key={key} title={key} isCollapsed>
-
                     <Modal size='4xl' isOpen={isModalOpen} onOpenChange={onModalOpenChange}>
                         <ModalContent>
                             {(onClose) => (
@@ -125,12 +110,10 @@ function Services() {
                                             ))}
                                         </div>
                                     </ModalBody>
-
                                 </>
                             )}
                         </ModalContent>
                     </Modal>
-
                 </AccordionItem>
             );
         } else if (typeof value === "object" && value !== null) {
@@ -184,46 +167,18 @@ function Services() {
                             <CardBody className="overflow-visible p-0">
                                 <div className='border rounded-lg overflow-hidden'>
                                     <Image
-                                        isZoomed
+                                        loading='lazy'
                                         alt={item.title}
-                                        className="w-full object-cover"
-                                        radius="lg"
-                                        shadow="sm"
-                                        src={item.image.src}
+                                        className="w-full object-cover rounded-lg shadow-sm hover:scale-125 !duration-500"
+                                        src={item.image}
                                     />
                                 </div>
-
                             </CardBody>
                             <CardFooter className="text-small justify-between px-1 py-1">
                                 <p className='text-lg text-spatikaBlack font-medium '>{item.title}</p>
                                 <p className="text-default-500">{item.detail}</p>
                             </CardFooter>
                         </div>
-                        <div className='hidden hover:visible'>
-                            {/* <CardBody className="overflow-visible p-0">
-                                <div className='border rounded-lg overflow-hidden'>
-                                    <Image
-                                        alt={item.title}
-                                        className="w-full object-cover h-[300px]"
-                                        radius="lg"
-                                        shadow="sm"
-                                        src={item.img}
-                                        width="100%"
-                                    />
-                                </div>
-
-                            </CardBody> */}
-                            {/* <CardFooter className="text-small justify-between">
-                                <b>{item.title}</b>
-                                <p className="text-default-500">{item.detail}</p>
-                            </CardFooter> */}
-                            <div
-                                class="absolute left-0 mt-2 w-40 p-2 bg-gray-800 text-white text-sm rounded opacity-0 invisible transition-all duration-300 ease-in-out transform scale-90 group-hover:opacity-100 group-hover:visible group-hover:scale-100"
-                            >
-                                This is a hidden element!
-                            </div>
-                        </div>
-
                     </Card>
                 })}
             </div>
@@ -243,13 +198,10 @@ function Services() {
                     {(onClose) => (
                         <>
                             <ModalHeader className="absolute top-0 inset-x-0 z-50 flex flex-row gap-2 px-2 py-2 border-default-200/50 justify-between bg-content1/50 backdrop-saturate-150 backdrop-blur-lg">
-
                                 <div className="gap-1 text-center">
-
                                     <h1 className="text-xl font-semibold text-neutral-900 leading-7">
                                         {activeService.title} Service
                                     </h1>
-
                                 </div>
                                 <Tooltip content="Close">
                                     <Button
@@ -294,15 +246,12 @@ function Services() {
                                             </svg>
                                         </Button>
                                     </Tooltip>
-                                    <div className='border bg-slate-400 rounded-xl h-auto w-[30%]'>
+                                    <div className='border bg-slate-400 overflow-hidden rounded-xl h-auto w-[30%]'>
                                         <Image
-                                            isZoomed
-                                            isBlurred
+                                            loading='lazy'
                                             alt={activeService.title}
-                                            className="w-full object-cover"
-                                            radius="lg"
-                                            shadow="sm"
-                                            src={activeService.image.src}
+                                            className="w-full object-cover rounded-lg shadow-sm hover:scale-125 !duration-500"
+                                            src={activeService.image}
                                         />
                                     </div>
                                     <Tooltip content="Next">
@@ -330,8 +279,6 @@ function Services() {
                                             </svg>
                                         </Button>
                                     </Tooltip>
-
-
                                 </div>
                                 <p className="text-neutral-500 text-base">
                                     {activeService.discription}
@@ -464,12 +411,6 @@ function Services() {
                                     </div>
                                 </div>
                             </ModalBody>
-                            {/* <ModalFooter className="flex flex-col gap-1">
-                                <div className="text-default-600 text-sm">Contact the saloon</div>
-                                <Link className="text-default-400" href={`tel:8655165656`} size="sm">
-                                    8655165656
-                                </Link>
-                            </ModalFooter> */}
                         </>
                     )}
                 </ModalContent>
