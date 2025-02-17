@@ -12,7 +12,7 @@ function Footer() {
             {/* after mobile footer  */}
             <div class="max-w-6xl mx-auto px-4 ">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-neutral-700">
-                    <div class="space-y-4 order-2 md:order-1">
+                    <div class="space-y-4">
                         <div className='text-center'>
                             <Image
                                 loading='lazy'
@@ -22,7 +22,7 @@ function Footer() {
                             />
                         </div>
                         <p class="text-neutral-500">Transforming your look with expert care and style since 2010.</p>
-                        <div class="flex space-x-4 justify-around md:justify-start order-1 md:order-2">
+                        <div class="flex space-x-4 justify-around md:justify-start ">
                             <Link href="#" class="text-neutral-400 hover:text-pink-500">
                                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
                             </Link>
@@ -75,7 +75,7 @@ function Footer() {
 
 
 
-                    <div className='order-3'>
+                    <div className=''>
                         <h4 class="text-lg font-semibold text-neutral-800 mb-4">FeedBack</h4>
                         <p class="text-neutral-600 mb-4">Scan the QR code to submit your feedback in the review section.</p>
                         <div className='max-w-28'>

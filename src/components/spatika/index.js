@@ -41,26 +41,17 @@ function Spatika() {
                         <div className="relative">
                             <div className="absolute -inset-1 bg-rose-500 rounded-lg blur opacity-30"></div>
                             <div className="relative bg-neutral-800 rounded-lg p-4 md:p-8">
-                                <div className="grid grid-cols-1 gap-4">
-                                    {
-                                        spatikaServicCategories.map((item, index) => {
-                                            if (spatikaServicCategories.length - 1 !== index) {
-                                                return (
-                                                    <div className="bg-neutral-700 rounded-lg p-4 hover:bg-neutral-600 transition-colors">
-                                                        <h3 className="text-xl font-semibold text-rose-500">{item.title}</h3>
-                                                        <p className="text-gray-300">{item.discription}</p>
-                                                    </div>
-                                                )
-                                            } else {
-                                                return (
-                                                    <div className="bg-neutral-700 md:col-span-2 rounded-lg p-4 hover:bg-neutral-600 transition-colors">
-                                                        <h3 className="text-xl font-semibold text-rose-500">{item.title}</h3>
-                                                        <p className="text-gray-300">{item.discription}</p>
-                                                    </div>
-                                                )
-                                            }
-                                        })
-                                    }
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    {spatikaServicCategories.map((item, index) => (
+                                        <div
+                                            key={index}
+                                            className={`bg-neutral-700 rounded-lg p-4 hover:bg-neutral-600 transition-colors ${index === spatikaServicCategories.length - 1 ? "md:col-span-2" : "col-span-1"
+                                                }`}
+                                        >
+                                            <h3 className="text-xl font-semibold text-rose-500">{item.title}</h3>
+                                            <p className="text-gray-300">{item.discription}</p>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
