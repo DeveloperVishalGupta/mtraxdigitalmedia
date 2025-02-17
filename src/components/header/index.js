@@ -16,7 +16,6 @@ export default function Header() {
         <Navbar className="h-[4.5rem] w-full spatikaHeader md:px-12 static">
             <NavbarBrand className="order-2 md:order-1 justify-end md:justify-start" >
                 <div className="h-16  flex justify-start items-center">
-                    {/* <SpatikaLogo className="h-20 w-fit" /> */}
                     <Image
                         loading="lazy"
                         className="h-20 w-fit"

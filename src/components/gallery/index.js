@@ -65,7 +65,6 @@ function Gallery({ heading, headingText, filter = false, data, showMoreButton = 
                             })
                         }
                     </div>
-                    {/* { */}
                     {/* Load More Button  */}
                     {showMoreButton &&
                         <div div class="text-center mt-12">

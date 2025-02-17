@@ -1,15 +1,9 @@
-import Image from "next/image";
 import React, { useState } from "react";
 import Slider from "react-slick";
-import product1 from '@/assets/images/product/product1.jpg'
-import { Heading, primary } from "@/elements/heading";
-import { Button } from "@nextui-org/button";
-// import Heading, { primary } from "@/elements/heading";
 
 function TestimonialCarousel({ data }) {
     const [expandedReviews, setExpandedReviews] = useState({});
     const settings = {
-        // dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,

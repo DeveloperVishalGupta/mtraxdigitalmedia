@@ -16,7 +16,6 @@ function Appointment() {
                 </div>
 
                 {/* Booking Information  */}
-
                 <div class="space-y-8 animate__animated animate__fadeInRight">
                     {/* Booking on WhatsApp */}
                     <div class="bg-neutral-100 rounded-xl p-8">

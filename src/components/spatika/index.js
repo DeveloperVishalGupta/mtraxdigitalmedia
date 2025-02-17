@@ -44,10 +44,6 @@ function Spatika() {
                                 <div className="grid grid-cols-1 gap-4">
                                     {
                                         spatikaServicCategories.map((item, index) => {
-                                            // return <div className="bg-neutral-700 rounded-lg p-4 hover:bg-neutral-600 transition-colors">
-                                            //     <h3 className="text-xl font-semibold text-rose-500">{item.title}</h3>
-                                            //     <p className="text-gray-300">{item.discription}</p>
-                                            // </div>
                                             if (spatikaServicCategories.length - 1 !== index) {
                                                 console.log('not ;ast, ', index);
 

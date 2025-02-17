@@ -3,7 +3,6 @@ import Link from 'next/link'
 import React from 'react'
 import SectionHeading from '../sectionHeading'
 import Image from 'next/image'
-// import { Image } from '@nextui-org/image'
 
 function Team() {
     return (

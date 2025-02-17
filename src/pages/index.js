@@ -137,9 +137,7 @@ function Home() {
                 <div className="grid text-center grid-cols-2">
                   {contactNumbers.map((item) => {
                     return <div>
-                      {/* <div className="absolute -inset-1 bg-rose-500 rounded-lg blur opacity-30"></div> */}
                       <div className="border-neutral-700 rounded-md  bg-neutral-600 my-2 mx-4 ">
-
                         <a href={`tel:+91${item}`} className="text-white py-2 block">{`(+91) ${item}`}</a></div>
                     </div>
                   })}

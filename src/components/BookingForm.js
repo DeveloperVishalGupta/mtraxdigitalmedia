@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-// import emailjs from "@emailjs/browser";
-
 import emailjs from '@emailjs/browser'
 import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, useDisclosure } from "@heroui/modal";
 import { Button } from "@heroui/button";
 import WhatsappIcon from "@/assets/icons/whatsapp";
 import { Link } from "@heroui/link";
-// import mailjs from 'mai'
 
 const BookingForm = () => {
     const [formData, setFormData] = useState({
@@ -48,7 +45,7 @@ const BookingForm = () => {
             .sendForm(
                 "service_gufy53j",  // Replace with actual Service ID
                 "template_axz6j8l", // Replace with actual Template ID
-                templateParams,           // Form reference
+                templateParams,
                 "wzomne5c6xqcdEf4D"   // Replace with actual Public Key from EmailJS
             )
             .then(
@@ -64,48 +61,6 @@ const BookingForm = () => {
                 }
             );
     };
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-
-    //     const templateParams = {
-    //         name: formData.name,
-    //         email: formData.email,
-    //         phone: formData.phone,
-    //         service: formData.service,
-    //     };
-
-    //     // Send email to Admin
-    //     emailjs
-    //         .send(
-    //             "service_gufy53j", // Replace with your EmailJS Service ID
-    //             "template_k32r4dn", // Replace with EmailJS Admin Template ID
-    //             templateParams,
-    //             "wzomne5c6xqcdEf4D" // Replace with your EmailJS Public Key
-    //         )
-    //         .then((response) => {
-    //             console.log("Admin email sent successfully!", response);
-
-    //             // After admin email, send confirmation to user
-    //             emailjs
-    //                 .send(
-    //                     "service_gufy53j", // Same Service ID
-    //                     "template_axz6j8l", // Replace with EmailJS User Template ID
-    //                     templateParams,
-    //                     "wzomne5c6xqcdEf4D"
-    //                 )
-    //                 .then((userResponse) => {
-    //                     console.log("User email sent successfully!", userResponse);
-    //                     alert("Booking request submitted successfully!");
-    //                 })
-    //                 .catch((error) => {
-    //                     console.error("Failed to send user confirmation email:", error);
-    //                 });
-    //         })
-    //         .catch((error) => {
-    //             console.error("Failed to send admin email:", error);
-    //             alert("Failed to send booking request.");
-    //         });
-    // };
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6 text-white">
