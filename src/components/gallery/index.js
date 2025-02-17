@@ -1,12 +1,9 @@
 import React from 'react'
 import SectionHeading from '../sectionHeading'
 import Image from 'next/image';
-import { Card, CardBody, CardFooter, CardHeader } from '@nextui-org/card';
+import { Card, CardBody } from '@nextui-org/card';
 
 function Gallery({ heading, headingText, filter = false, data, showMoreButton = false }) {
-    console.log(data);
-
-
     return (
         <div>
             <section id="gallery" class="bg-white py-20">
@@ -35,11 +32,8 @@ function Gallery({ heading, headingText, filter = false, data, showMoreButton = 
                     <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6" id="gallery-grid">
                         {/* Gallery items will be dynamically populated  */}
                         {
-                            data.map((item, index) => {
-                                console.log(item);
-
+                            data.map((item) => {
                                 let partnersCardStyle = {}; // Fixed variable name
-
                                 if (
                                     item.title === "Brazilian Hairtech" ||
                                     item.title === "Deplieve" ||

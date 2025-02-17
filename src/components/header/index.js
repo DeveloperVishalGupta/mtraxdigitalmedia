@@ -8,7 +8,6 @@ import {
 import Spatika from '@/assets/images/logo.png'
 import { NavMenus } from "@/model/constant";
 import Image from "next/image";
-import SpatikaLogo from "@/assets/images/SVG/headerlogo.svg";
 import Bars from "@/assets/icons/bars";
 
 export default function Header() {
@@ -47,17 +46,6 @@ export default function Header() {
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent className="md:hidden" justify="center">
-                {/* {
-                    NavMenus.map((item, index) => {
-                        return (
-                            <NavbarItem>
-                                <Link className="font-medium text-gray-900  hover:text-rose-500 bottom-b" color="foreground" href={item.href}>
-                                    {item.title}
-                                </Link>
-                            </NavbarItem>
-                        )
-                    })
-                } */}
                 <NavbarItem>
                     <Link
                         className="rounded-md bg-rose-500 px-3 hover:bg-rose-600 text-white font-medium py-1 h-9"

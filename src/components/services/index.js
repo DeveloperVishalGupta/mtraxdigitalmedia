@@ -132,8 +132,6 @@ function Services() {
     };
 
     useEffect(() => {
-        console.log(activeService);
-
         if (activeService && allServices) {
             setSelectedService(allServices[activeService.title])
         }
@@ -144,7 +142,6 @@ function Services() {
             onDrawerOpen()
         }
     }, [selectedService])
-    console.log(selectedService);
 
     return (
         <div className=''>
@@ -153,8 +150,6 @@ function Services() {
 
                     return <Card className='border p-2 relative group' key={index} isPressable shadow="sm"
                         onPress={() => {
-                            console.log(item.title);
-
                             setActiveService({
                                 title: item.title,
                                 discription: item.discription,
