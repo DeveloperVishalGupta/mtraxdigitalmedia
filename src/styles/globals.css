@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
-/* @import "slick-carousel/slick/slick.css";
-@import "slick-carousel/slick/slick-theme.css"; */
+
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
-/* @import "@nextui-org/react/dist/styles.css"; */
 
 @tailwind base;
 @tailwind components;
@@ -37,12 +34,10 @@ html {
     --foreground: #ededed;
   }
 }
-.patuaOne,
+
 * {
-  /* font-family: "Patua One", serif; */
   font-weight: 400;
   font-style: normal;
-  /* color: var(--spatikaBlack); */
 }
 
 ::-webkit-scrollbar {
