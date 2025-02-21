@@ -33,6 +33,7 @@ const BookingForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const form = e.target
 
         const templateParams = {
             user_name: formData.name,
@@ -45,19 +46,20 @@ const BookingForm = () => {
             .sendForm(
                 "service_gufy53j",  // Replace with actual Service ID
                 "template_axz6j8l", // Replace with actual Template ID
-                templateParams,
+                // templateParams,
+                form,
                 "wzomne5c6xqcdEf4D"   // Replace with actual Public Key from EmailJS
             )
             .then(
                 (result) => {
                     console.log("Email sent successfully:", result.text);
                     setIsValid(true)
-                    isOpen()
+                    // isOpen()
                 },
                 (error) => {
-                    console.log("Email sending failed:", error.text);
+                    console.log("Email sending failed:", error);
                     setIsValid(false)
-                    isOpen()
+                    // isOpen()
                 }
             );
     };
