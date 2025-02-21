@@ -38,9 +38,7 @@ function TestimonialCarousel({ data }) {
     const generateStars = (count) => {
         return "★".repeat(count) + "☆".repeat(5 - count);
     };
-    const toggleReadMore = (index) => {
-        setExpandedReviews((prev) => ({ ...prev, [index]: !prev[index] }));
-    };
+
     return (
         <div className="slider-container px-10 testimonialCarousel">
             <Slider {...settings}>
@@ -56,19 +54,8 @@ function TestimonialCarousel({ data }) {
                                         <h4 class="text-white font-semibold">{item.name}</h4>
                                     </div>
                                 </div>
-                                <p className="text-gray-300">
-                                    {expandedReviews[index] || item.review.length <= 110
-                                        ? `"${item.review}"`
-                                        : `"${item.review.slice(0, 110)}... `}
-                                    {item.review.length > 110 && (
-                                        <span
-
-                                            onPress={() => toggleReadMore(index)}
-                                            className="text-rose-500 text-small cursor-pointer"
-                                        >
-                                            {expandedReviews[index] ? "Read Less" : "Read"}
-                                        </span>
-                                    )}
+                                <p className="text-gray-300 line-clamp-4">
+                                    {item.review}
                                 </p>
                                 <div class="flex text-rose-500 text-2xl">
                                     {generateStars(item.stars)}

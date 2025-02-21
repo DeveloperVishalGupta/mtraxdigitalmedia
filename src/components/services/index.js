@@ -200,6 +200,7 @@ function Services() {
                                 </div>
                                 <Tooltip content="Close">
                                     <Button
+                                        name='twitter icon'
                                         isIconOnly
                                         className="text-neutral-900"
                                         size="sm"
@@ -218,6 +219,7 @@ function Services() {
                                 <div className="flex w-full justify-between items-center pt-4">
                                     <Tooltip content="Previous">
                                         <Button
+                                            name='icon'
                                             isIconOnly
                                             className="text-white bg-neutral-700 -rotate-90"
                                             size="sm"
@@ -251,6 +253,7 @@ function Services() {
                                     </div>
                                     <Tooltip content="Next">
                                         <Button
+                                            name='icon'
                                             isIconOnly
                                             className="text-white bg-neutral-700 -rotate-90"
                                             size="sm"

@@ -111,6 +111,7 @@ function Home() {
                 </div>
                 <div className="text-end mt-3">
                   <Button
+                    name="visit"
                     className="rounded-md bg-rose-500 hover:bg-rose-600 text-white font-medium py-1 h-9"
                     radius="full"
                     onPress={() => {

@@ -26,7 +26,7 @@ function Contact() {
                                     <div className="border-slate-200 flex justify-between">
 
                                         <p className="font-normal ms-3  ps-3 text-sm">{contactNumber}</p>
-                                        <Button href={`tel:${contactNumber}`} style={{ boxShadow: 'inset 0 2px 0 0 hsla(0, 0%, 100%, .2), inset 0 -1px 0 0 rgba(0, 0, 0, .25), 0 2px 6px 0 rgba(0, 0, 0, .1)' }} size="sm" variant="bordered" className="h-6 bg-spatikaDarkRed text-white">
+                                        <Button name='call' href={`tel:${contactNumber}`} style={{ boxShadow: 'inset 0 2px 0 0 hsla(0, 0%, 100%, .2), inset 0 -1px 0 0 rgba(0, 0, 0, .25), 0 2px 6px 0 rgba(0, 0, 0, .1)' }} size="sm" variant="bordered" className="h-6 bg-spatikaDarkRed text-white">
                                             Call
                                         </Button>
                                     </div>
@@ -45,7 +45,7 @@ function Contact() {
                                 <At color={'gray'} width={12} height={14} />
                                 <p className="font-normal mb-0 ps-3 text-sm">spatikachemburdesk@gmail.com</p>
                             </div>
-                            <Button href={`mailto:${'spatikachemburdesk@gmail.com'}`} size="sm" variant="bordered" className="h-6">
+                            <Button name={'email'} href={`mailto:${'spatikachemburdesk@gmail.com'}`} size="sm" variant="bordered" className="h-6">
                                 Email
                             </Button>
                         </div>
@@ -58,7 +58,7 @@ function Contact() {
                                 <LocationCrosshairs color={'gray'} width={50} height={50} />
                                 <p className="font-normal mb-0 ps-3 text-sm">101,Spatika salon and spa,Silvento Building first floor, Central Avenue, Opposite OLPS church, Chembur East, Mumbai, Maharashtra 400071</p>
                             </div>
-                            <Button onPress={() => {
+                            <Button name={'map'} onPress={() => {
                                 handleShowRoute()
                             }} size="sm" variant="bordered" className="h-6">
                                 Map

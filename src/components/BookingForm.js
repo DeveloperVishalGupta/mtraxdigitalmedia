@@ -125,6 +125,7 @@ const BookingForm = () => {
             </div>
 
             <button
+                name="Book Appointment"
                 type="submit"
                 className="w-full bg-rose-500 text-white py-3 rounded-lg hover:bg-rose-600 transition-colors"
             >
@@ -132,6 +133,7 @@ const BookingForm = () => {
             </button>
 
             <Link
+                name={'Book Appointment on WhatsApp'}
                 href={whatsappUrl}
                 className="text-neutral-400 hover:text-pink-500 w-full flex flex-col items-start "
                 target="_blank"
@@ -139,6 +141,7 @@ const BookingForm = () => {
                 isDisabled={formData.email && formData.phone ? false : true}
             >
                 <button
+                    name="Book Appointment on WhatsApp"
                     type="button"
                     className="w-full flex justify-center items-center bg-rose-500 mt-4 text-white py-3 rounded-lg hover:bg-rose-600 transition-colors"
                 >
@@ -159,7 +162,7 @@ const BookingForm = () => {
                                 }
                             </ModalBody>
                             <ModalFooter>
-                                <Button color="danger" variant="light" onPress={onClose}>
+                                <Button name="close" color="danger" variant="light" onPress={onClose}>
                                     Close
                                 </Button>
                             </ModalFooter>
