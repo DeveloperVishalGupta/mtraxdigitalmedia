@@ -80,9 +80,9 @@ function Home() {
       </div>
 
       {/* our team  */}
-      <div>
+      {/* <div>
         <Team />
-      </div>
+      </div> */}
 
 
       {/* Appointment */}
