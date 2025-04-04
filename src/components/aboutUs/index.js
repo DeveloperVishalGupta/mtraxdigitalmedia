@@ -33,6 +33,7 @@ const AboutUs = () => {
                                 })
                             }
                         </div>
+
                     </div>
                     <div className="relative animate__animated animate__fadeInRight">
                         <div className="absolute -inset-2 bg-rose-500 rounded-xl blur opacity-20"></div>
@@ -54,6 +55,11 @@ const AboutUs = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className=" pt-20">
+                    <p className=" text-large text-neutral-700 leading-relaxed ">
+                        Our backed by a strong hairstyling legacy, we offer head to toe beauty and grooming services, coupled with expert global products, all under one roof. Beautiful in function and form, our treatments enriches your beauty with superior quality. Our team of experts provide the best hair care, make up, spa, mehendi, nail art, pedicure, manicure, body and face care services. We believe that each person has unique hair that requires personalised attention. Tell us – is there anything worse than a bad hair day? Whether you’re getting married, heading to a party, or need to pamper your hair, we’re here for you. Come sit down in our chair and tell us everything.
+                    </p>
                 </div>
             </div>
         </section>

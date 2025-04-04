@@ -278,7 +278,7 @@ function Services() {
                                         </Button>
                                     </Tooltip>
                                 </div>
-                                <p className="text-neutral-500 text-base">
+                                <p className="text-neutral-800 font-semibold text-base">
                                     {activeService.discription}
                                 </p>
                                 <div className="flex flex-col gap-2 pt-2">
