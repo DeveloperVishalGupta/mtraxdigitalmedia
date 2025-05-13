@@ -34,14 +34,6 @@ const BookingForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target
-
-        // const templateParams = {
-        //     user_name: formData.name,
-        //     user_email: formData.email,
-        //     user_phone: formData.phone,
-        //     selected_service: formData.service,
-        // };
-
         emailjs
             .sendForm(
                 "service_gufy53j",  // Replace with actual Service ID

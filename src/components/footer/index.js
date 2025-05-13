@@ -70,7 +70,7 @@ function Footer() {
                                     })
                                 }
                                 <li >
-                                    <Link href={'./privacyPolicy/index'} class="text-neutral-600 hover:text-pink-500">Privacy Policy</Link>
+                                    <Link href={'./privacyPolicy'} class="text-neutral-600 hover:text-pink-500">Privacy Policy</Link>
                                 </li>
                             </ul>
                         </div>
