@@ -18,6 +18,7 @@ function Home() {
   const destinationLatitude = 19.055764;
   const destinationLongitude = 72.900436;
   const destinationLongitude1 = 72.900436;
+  const destinationLongitude2 = 72.900436;
 
   const handleShowRoute = () => {
     if (navigator.geolocation) {
