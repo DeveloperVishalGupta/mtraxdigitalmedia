@@ -33,14 +33,14 @@ export default function RootLayout({ children }) {
             </main>
             {/* <Footer /> */}
             <footer className="w-full  py-3">
-              <div className="grid grid-cols-4">
+              {/* <div className="grid grid-cols-4">
                 <div>
                   <GetInTouch />
                 </div>
                 <div>1</div>
                 <div>1</div>
                 <div>1</div>
-              </div>
+              </div> */}
 
               <div className="flex justify-center items-center">
                 <Link
@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
                   title="heroui.com homepage"
                 >
                   <span className="text-default-600">Powered by</span>
-                  <p className="text-primary">HeroUI</p>
+                  <p className="text-primary">MG+</p>
                 </Link>
               </div>
             </footer>
