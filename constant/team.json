@@ -1,0 +1,310 @@
+[
+  {
+    "teamTitle": "The Dream Architects",
+    "teamDetail": "They built the vision — now they're building the future.",
+    "data": [
+      {
+        "image": "anshulAnand",
+        "name": "Anshul Anand",
+        "gender": 0,
+        "position": "Co-founder",
+        "discribe": "Dreams big, leads bold—on a mission to change how children learn forever.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "image": "priyankarPrasad",
+        "name": "Priyankar Prasad",
+        "gender": 0,
+        "position": "Co-founder",
+        "discribe": "Spreads Tailwnd’s magic with stories, strategies, and schools that love us.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "teamTitle": "Code Commandos",
+    "teamDetail": "Turning caffeine into code and ideas into features.",
+    "data": [
+      {
+        "image": "aakashKadam",
+        "name": "Aakash Kadam",
+        "gender": 0,
+        "position": "Data Tunneler",
+        "discribe": "Backend whiz, digging deep to power seamless user journeys.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "image": "architAnand",
+        "name": "Archit Anand",
+        "gender": 0,
+        "position": "AI Alchemist",
+        "discribe": "Blending AI and brains to craft magical, personalized learning journeys.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "image": "NarendraJadhav",
+        "name": "Narendra Jadhav",
+        "gender": 0,
+        "position": "Code Commander-in-Chief",
+        "discribe": "Builds the backend brains; keeps the tech alive and kicking 24/7.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/narendra-jadhav-5b7a57237/"
+          }
+        ]
+      },
+      {
+        "image": "hemantGharat",
+        "name": "Hemant Gharat",
+        "gender": 0,
+        "position": "DevOps Dynamo",
+        "discribe": "Uploads, updates, and ensures the engines are always humming smoothly.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "image": "vishwanathNizampurkar",
+        "name": "Vishwanath Nijampurkar",
+        "gender": 0,
+        "position": "Backend Boss",
+        "discribe": "Architects robust systems that scale smarter than a school kid's curiosity.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "image": "vishalGupta",
+        "name": "Vishal Gupta",
+        "gender": 0,
+        "position": "Frontend Wizard",
+        "discribe": "Weaves Tailwnd’s face with clean, smooth, and snappy React magic.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/vishal2210/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "teamTitle": "Learning Wizards",
+    "teamDetail": "Masters of making minds tick — and textbooks click.",
+    "data": [
+      {
+        "image": "kalpanaChaudhary",
+        "name": "Kalpana Chaudhary",
+        "gender": 1,
+        "position": "Chief Learning Enchanter",
+        "discribe": "Crafts brilliant content and guides wizards who turn textbooks into wonder.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "teamTitle": "Magic Messengers",
+    "teamDetail": "Bringing Tailwnd to the world, one school at a time.",
+    "data": [
+      {
+        "image": "ashishSharma",
+        "name": "Ashish Sharma",
+        "gender": 0,
+        "position": "Idea Connector",
+        "discribe": "Talks tech, teaches trends—builds bridges between brains, brands, and beats.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "image": "henayaHaripriya",
+        "name": "Henaya Haripriya",
+        "gender": 0,
+        "position": "Signal Seeker",
+        "discribe": "Listens deep, speaks clear—brings Tailwnd where it truly matters most.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "image": "krishnaSharma",
+        "name": "Krishna Sharma",
+        "gender": 0,
+        "position": "School Hero on call",
+        "discribe": "Helps schools make Tailwnd click—with teachers, students, and happy smiles.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "teamTitle": "Brainy Builders & Heart Whisperers",
+    "teamDetail": "Shaping minds with science and empathy.",
+    "data": [
+      {
+        "image": "abhaBiyani",
+        "name": "Abha Biyani",
+        "gender": 1,
+        "position": "Mindset Magician",
+        "discribe": "Guides hearts, rewires minds—helps people unlock their true, calm selves.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "image": "komalAgarwal",
+        "name": "Komal Agarwal",
+        "gender": 1,
+        "position": "Joy Builder",
+        "discribe": "Coaches kids, parents, and teachers to thrive, smile, and grow with grace.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      },
+      {
+        "image": "shubornoChakroborty",
+        "name": "Shuborno Chakroborty",
+        "gender": 0,
+        "position": "Learning Whisperer",
+        "discribe": "Teaches teachers to teach smarter—bridging science and classroom magic.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "teamTitle": "The Wise Owls",
+    "teamDetail": "Guiding us with experience, insight, and calm superpowers.",
+    "data": [
+      {
+        "image": "runalisaSinha",
+        "name": "Runalisa Sinha",
+        "gender": 1,
+        "position": "UX Sherpa",
+        "discribe": "Leads users down the smoothest paths—no clicks wasted, no minds confused.",
+        "socialMedia": [
+          {
+            "name": "faceBook",
+            "link": ""
+          },
+          {
+            "name": "LinkedIn",
+            "link": ""
+          }
+        ]
+      }
+    ]
+  }
+]
