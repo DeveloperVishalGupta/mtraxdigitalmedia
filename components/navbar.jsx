@@ -19,6 +19,7 @@ import { ThemeSwitch } from './theme-switch';
 import { siteConfig } from '../config/site';
 import { YouTube } from '../assets/brand-Icons';
 import { useEffect, useState } from 'react';
+import SearchPage from './search';
 
 export const Navbar = () => {
   const pageRoutes = siteConfig.pageRoutes;
@@ -85,6 +86,7 @@ export const Navbar = () => {
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+        {/* <NavbarItem className="hidden lg:flex"><SearchPage/></NavbarItem> */}
         {/* <NavbarItem className="hidden md:flex">
           <Button
             isExternal

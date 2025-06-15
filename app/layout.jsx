@@ -95,7 +95,6 @@ export default function RootLayout({ children }) {
 
               <div className="flex justify-center items-center">
                 <NextLink
-                  // isExternal
                   className="flex items-center gap-1 text-current"
                   href="https://heroui.com?utm_source=next-app-template"
                   title="heroui.com homepage"

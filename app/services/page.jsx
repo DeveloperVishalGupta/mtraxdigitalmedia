@@ -36,7 +36,7 @@ export default function ServicesPage() {
         {/* 🔸 Content */}
         <div className="relative border p-10 rounded-2xl dark:bg-neutral-800/50 bg-white/15 z-20 text-center mx-4 sm:mx-0 sm:w-3/4 flex flex-col items-center justify-center text-white px-4">
           <div className="flex flex-col gap-4">
-            <h1 className={title({ size: 'xl' })}>
+            <h1 id='musicCareer' className={title({ size: 'xl' })}>
               The Right Place to Push Your{' '}
               <span className="text-orange-400">Music Career</span> Beyond
               Limits

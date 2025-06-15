@@ -1,4 +1,3 @@
-// 'use client'
 function LinkListComponent({ data, vertical = false }) {
   return (
     <div>

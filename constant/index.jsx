@@ -473,3 +473,16 @@ export const Benefits = [
       'Dedicated support team to help you with music rights, copyright  protection, and royalties.',
   },
 ];
+
+export const headings = [
+  { title: 'The Right Place to Push Your Music Career Beyond Limits', page: '/services', id: 'musicCareer' },
+  { title: 'worldwide distribution', page: '/services', id: 'worldwideDistribution' },
+  { title: 'Global Music Publishing', page: '/services', id: 'globalMusicPublishing' },
+  { title: 'YouTube Monetization', page: '/services', id: 'youTubeMonetization' },
+  { title: 'Rights Management', page: '/services', id: 'rightsManagement' },
+  { title: 'Distribute your music Everywhere', page: '/distribute-your-music', id: '  ' },
+  { title: 'About Us', page: '/about', id: 'about-us' },
+  { title: 'Our Team', page: '/about', id: 'our-team' },
+  { title: 'Web Development', page: '/services', id: 'web-dev' },
+  { title: 'Contact Us', page: '/contact', id: 'contact-us' },
+];

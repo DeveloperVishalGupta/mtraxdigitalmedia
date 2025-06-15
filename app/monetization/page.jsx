@@ -153,7 +153,6 @@ export default function MonetizationPage() {
             </h1>
           }
           details={`Start monetizing your YouTube channels and earn unlimited income whenever someone  streams or uses your music. Get expert assistance to optimize and manage your YouTube   channels efficiently. Skyrocket your music career with HarDan Music Group.
-
 `}
           componentWidth={'90%'}
           // detailsFont={20}

@@ -99,7 +99,6 @@ export const FadeInDiv = ({ className, tabs, hovering }) => {
           }}
           className={cn('w-full h-full absolute top-0 left-0', className)}
         >
-          {/* {tab.content} */}
           <ComparisonTable />
         </motion.div>
       ))}

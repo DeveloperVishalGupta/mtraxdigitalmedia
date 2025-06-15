@@ -11,8 +11,7 @@ const config = {
     extend: {
       colors: {
         transGray: '#a1a1aa57',
-        // Add your custom colors here
-        colorcolor: '#fe9601', // Example custom color
+        colorcolor: '#fe9601',
         softyellow: '#fffae7',
         myblue: '#0066ff',
       },
