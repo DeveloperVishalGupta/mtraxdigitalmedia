@@ -16,11 +16,13 @@ export const prefrences = [
 export default function ContactPage() {
   return (
     <div className="flex flex-col gap-y-20">
-      <div className="grid grid-cols-4 lg:ps-10">
-        <GetInTouch />
-        <div className="col-span-2">
+      <div className="grid sm:grid-cols-2 gap-11 sm:gap-0 lg:ps-10">
+        <div className="text-center md:text-start">
+          <GetInTouch />
+        </div>
+        <div className="px-4 text-center md:text-start">
           <h1 className={title({ size: 'sm' })}>Contact form</h1>
-          <div className=" bg-transGray w-full mt-8 flex flex-col gap-4  rounded-lg px-10 py-8">
+          <div className=" bg-transGray w-full mt-8 flex flex-col gap-4  rounded-lg px-4 sm:px-10 py-8">
             <Input
               label="Name"
               type="email"
@@ -62,8 +64,9 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-
-      <Discribe />
+      <div className="px-4 sm:px-0">
+        <Discribe />
+      </div>
     </div>
   );
 }

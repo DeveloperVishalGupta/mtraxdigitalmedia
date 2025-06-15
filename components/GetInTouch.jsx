@@ -4,7 +4,7 @@ import { CircleCheck } from '../assets/icons/icons';
 
 function GetInTouch() {
   return (
-    <div className="flex-col inline-flex col-span-2">
+    <div className="flex-col inline-flex ">
       <h1 className={`${title({ size: 'sm' })} mb-9`}>Get In Touch</h1>
       <div>
         {getInTouch.map((item, index) => {

@@ -36,7 +36,7 @@ export default function DigitalStorePage() {
       </div>
 
       <div>
-        <div className="flex gap-2 justify-center mb-8">
+        <div className="flex gap-2 flex-col sm:flex-row justify-center mb-8">
           <h1 className={`${title()} `}>Digital plateforms for</h1>
 
           <h1 className={`${title()} text-orange-400`}>your music</h1>
@@ -44,7 +44,7 @@ export default function DigitalStorePage() {
 
         <HoverEffect items={musicPlatforms} page={'distribution'} />
       </div>
-      <div className="  ">
+      <div className=" px-4 sm:px-0 ">
         <VideoPromoCard
           image={singer}
           heading={
@@ -74,7 +74,7 @@ export default function DigitalStorePage() {
           royalties and rights hassle-free. So create your free account today,
           and let's rock and roll!
         </p>
-        <div className="socialmedia flex justify-around items-center gap-8 w-1/2 mx-auto  mt-12 icons">
+        <div className="socialmedia flex justify-around items-center gap-8 flex-wrap px-4 sm:px-0 sm:w-1/2 mx-auto  mt-12 icons">
           <Instagram />
           <FaceBook />
           <Ticktock />
@@ -83,7 +83,7 @@ export default function DigitalStorePage() {
         </div>
       </div>
 
-      <div>
+      <div className="px-4 sm:px-0 mb-12 sm:mb-0">
         <Discribe />
       </div>
     </div>

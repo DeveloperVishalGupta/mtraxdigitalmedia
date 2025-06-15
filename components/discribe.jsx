@@ -6,9 +6,9 @@ import { title } from './primitives';
 
 function Discribe() {
   return (
-    <div className="dark:border-white border-gray-400 border-2 grid grid-cols-7 rounded-2xl overflow-hidden ">
-      <div className="flex justify-center items-center col-span-4">
-        <div className="px-12 py-8 flex flex-col gap-5">
+    <div className="dark:border-neutral-400 border-gray-400 border-2 grid grid-cols-7 rounded-2xl overflow-hidden ">
+      <div className="flex justify-center items-center col-span-full sm:col-span-4">
+        <div className="px-4 text-center sm:text-start md:px-12 py-8 flex flex-col gap-5">
           <h1 className={`${title({ size: 'sm' })} font-semibold  `}>
             Let MG Plus drive the success of your next release
           </h1>
@@ -17,7 +17,7 @@ function Discribe() {
           </p>
         </div>
       </div>
-      <div className="col-span-3">
+      <div className="sm:col-span-3 col-span-full">
         <Image alt="HeroUI hero Image" src={streamingServices} />
       </div>
     </div>

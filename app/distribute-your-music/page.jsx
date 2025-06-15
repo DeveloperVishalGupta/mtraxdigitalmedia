@@ -1,7 +1,9 @@
+'use client';
 import { title } from '../../components/primitives';
-import { HoverEffect } from '../../components/ui/card-hover-effect';
 import { musicPlatforms } from '../../constant';
 import singer from '../../assets/images/singer.jpg';
+import { HoverEffect } from '../../components/ui/card-hover-effect';
+
 import {
   FaceBook,
   Instagram,
@@ -28,15 +30,16 @@ export default function DistributeMusic() {
         </p>
       </div>
       <div>
-        <div className="flex gap-2 justify-center mb-8">
+        <div className="flex flex-col sm:flex-row gap-2 justify-center mb-8">
           <h1 className={`${title()} `}>Digital plateforms for</h1>
 
           <h1 className={`${title()} text-orange-400`}>your music</h1>
         </div>
+        {console.log(musicPlatforms)}
 
         <HoverEffect items={musicPlatforms} page={'distribution'} />
       </div>
-      <div className="  ">
+      <div className="  px-4 sm:px-0">
         <VideoPromoCard
           image={singer}
           heading={
@@ -53,10 +56,15 @@ export default function DistributeMusic() {
         />
       </div>
 
-      <div className="h-[calc(100vh-6.625rem)] flex justify-center items-start flex-col">
+      <div className="h-[calc(100vh-6.625rem)] px-4 flex justify-center items-start flex-col">
         <div className="flex flex-col gap-5 items-center mx-auto justify-center mb-8">
-          <h1 className={`${title()} `}>Promote Your Music in All Major</h1>
-          <h1 className={`${title()} text-orange-400`}>
+          <h1 className={`${title()} `}>
+            Promote Your Music in All Major{' '}
+            <span className={`sm:hidden leading-relaxed text-orange-400`}>
+              Social Media Channels
+            </span>
+          </h1>
+          <h1 className={`${title()} text-orange-400 hidden md:block`}>
             Social Media Channels
           </h1>
         </div>
@@ -66,7 +74,7 @@ export default function DistributeMusic() {
           royalties and rights hassle-free. So create your free account today,
           and let's rock and roll!
         </p>
-        <div className="socialmedia flex justify-around items-center gap-8 w-1/2 mx-auto  mt-12 icons">
+        <div className="socialmedia flex justify-around flex-wrap items-center gap-8 px-4 sm:px-0 sm:w-1/2 mx-auto  mt-12 icons">
           <Instagram />
           <FaceBook />
           <Ticktock />
@@ -75,7 +83,7 @@ export default function DistributeMusic() {
         </div>
       </div>
 
-      <div>
+      <div className="px-4 sm:px-0">
         <Discribe />
       </div>
     </div>

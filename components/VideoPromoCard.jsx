@@ -11,8 +11,8 @@ export function VideoPromoCard({
   showPlateforms = false,
 }) {
   return (
-    <div className="dark:border-white border-gray-400 border-2 grid grid-cols-7 rounded-2xl overflow-hidden ">
-      <div className="col-span-3">
+    <div className="dark:border-neutral-400 border-gray-400 border-2 grid grid-cols-7 rounded-2xl overflow-hidden ">
+      <div className="col-span-full sm:col-span-3">
         {video && (
           <video className="w-full h-full " autoPlay loop muted playsInline>
             <source src={video} type="video/mp4" />
@@ -22,38 +22,38 @@ export function VideoPromoCard({
         {image && (
           <Image
             alt="HeroUI hero Image"
-            isZoomed
             src={image}
             className="!rounded-none "
           />
         )}
       </div>
-      <div className="flex justify-center items-center col-span-4">
-        <div className="px-12 py-8 flex flex-col gap-5">
+      <div className="flex  justify-center items-center col-span-full sm:col-span-4">
+        <div className="px-4 sm:px-12 py-8 flex flex-col gap-5">
           {heading}
           <p className="text-lg font-semibold dark:text-white text-gray-500">
             {details}
           </p>
           {showPlateforms && (
-            <div className="flex flex-wrap  mt-5 justify-around items-center">
-              <div className="flex gap-1 items-center">
-                <YouTube />
-                <h1 className={`${title({ size: 'sm' })} font-semibold  `}>
-                  YouTube
-                </h1>
-              </div>
-              <div className="flex gap-1 items-center">
-                <Amazon />
-                <h1 className={`${title({ size: 'sm' })} font-semibold  `}>
-                  Amazon
-                </h1>
-              </div>
-              <div className="flex gap-1 items-center">
-                <Spotify />
-                <h1 className={`${title({ size: 'sm' })} font-semibold  `}>
-                  Spotify
-                </h1>
-              </div>
+            <div className="sm:flex flex-wrap  mt-5 justify-around items-center">
+              {['YouTube', 'Amazon', 'Spotify'].map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="flex mb-4 sm:mb-0 justify-center sm:justify-start gap-3 sm:gap-1 items-center"
+                  >
+                    {item === 'YouTube' ? (
+                      <YouTube />
+                    ) : item === 'Amazon' ? (
+                      <Amazon />
+                    ) : (
+                      <Spotify />
+                    )}
+                    <h1 className={`${title({ size: 'sm' })} font-semibold  `}>
+                      {item}
+                    </h1>
+                  </div>
+                );
+              })}
             </div>
           )}
         </div>

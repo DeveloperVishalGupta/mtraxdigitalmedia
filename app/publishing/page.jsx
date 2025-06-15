@@ -106,7 +106,7 @@ export default function PublishingPage() {
           </h1>
         </div>
         <div>
-          <div className="grid grid-cols-2 gap-5 pt-5 gap-y-12">
+          <div className="grid sm:grid-cols-2 gap-5 pt-5 gap-y-5 sm:gap-y-12">
             {publishingRoyalties.map((item, index) => {
               return (
                 <div className="text-start w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto">
@@ -125,7 +125,7 @@ export default function PublishingPage() {
         </div>
       </div>
 
-      <div>
+      <div className="px-4 sm:px-0">
         <VideoPromoCard
           image={musicPublished}
           heading={
@@ -137,7 +137,7 @@ export default function PublishingPage() {
           details={`Are you an artist? No more worries about publishing music or collecting royalties. We help you publish music on the right platform and get you the royalties you deserve.`}
         />
       </div>
-      <div>
+      <div className="">
         <HeroSectionTemp
           heading={
             <div className="flex flex-col gap-4">
@@ -148,7 +148,7 @@ export default function PublishingPage() {
               </h1>
             </div>
           }
-          componentWidth={'75%'}
+          componentWidth={'90%'}
           detailsFont={20}
           details={`Once you appoint HarDan Music Group as your publishing partner, you focus more on creating some amazing music and we focus on publishing them on the right platform and managing your music rights effectively.`}
         />

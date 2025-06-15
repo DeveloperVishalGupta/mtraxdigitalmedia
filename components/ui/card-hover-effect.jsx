@@ -12,9 +12,7 @@ import {
   Spotify,
   YouTube,
 } from '../../assets/brand-Icons';
-// import {Spotify} from '../../assets/brand-Icons/index'
-
-// import { useState } from 'react';
+import Link from 'next/link';
 
 export const HoverEffect = ({ items, className, page }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
@@ -35,9 +33,9 @@ export const HoverEffect = ({ items, className, page }) => {
       )}
     >
       {items.map((item, idx) => (
-        <a
-          href={item?.link}
-          key={item?.link}
+        <Link
+          href={item?.link || '#'}
+          key={idx}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -105,7 +103,7 @@ export const HoverEffect = ({ items, className, page }) => {
               </Button>
             )}
           </Card>
-        </a>
+        </Link>
       ))}
     </div>
   );
@@ -114,6 +112,7 @@ export const HoverEffect = ({ items, className, page }) => {
 export const Card = ({ className, children }) => {
   return (
     <div
+      // key={}
       className={cn(
         'rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20',
         className

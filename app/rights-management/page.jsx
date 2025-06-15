@@ -21,6 +21,7 @@ export default function RightsManagementPage() {
     'Flexible and reliable': relatable,
     'Dedicated Support': concert,
   };
+
   return (
     <div className="flex flex-col gap-20">
       <div>
@@ -32,14 +33,14 @@ export default function RightsManagementPage() {
               for your music
             </h1>
           }
-          componentWidth={'75%'}
+          componentWidth={'90%'}
           detailsFont={20}
           btnTitle="Protect your music now"
           showButton
           details={`Managing your music rights and collecting your royalties are no more stressful. We hold a hundred percent responsibility and commitment to managing and protecting your music and royalty rights worldwide across multiple platforms.`}
         />
       </div>
-      <div>
+      <div className="px-4 sm:px-0">
         <VideoPromoCard
           video={'/videos/musicArtist.mp4'}
           heading={
@@ -54,14 +55,14 @@ Here at HarDan Music Group, we are committed to helping artists bag their rights
       </div>
 
       <div>
-        <div className="w-3/5 leading-10 mx-auto">
+        <div className="w-4/5 sm:w-3/5 leading-10 mx-auto">
           <h1 className={title({ size: 'lg' })}>
             Manage Your <span className="text-orange-400">Rights </span> &{' '}
             <span className="text-orange-400">protect </span> your work
           </h1>
         </div>
         <div className="mt-12">
-          <div className="grid grid-cols-2 gap-5 pt-5 gap-y-12">
+          <div className="grid sm:grid-cols-2 gap-5 pt-5 gap-y-5 sm:gap-y-12">
             {rightsProtect.map((item, index) => {
               return (
                 <div className="text-start w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto">
@@ -85,19 +86,19 @@ Here at HarDan Music Group, we are committed to helping artists bag their rights
       </div>
 
       <div>
-        <div className="w-3/5 leading-10 mx-auto">
+        <div className="w-3/5  leading-10 mx-auto">
           <h1 className={title({ size: 'lg' })}>
             Your <span className="text-orange-400">Benefits </span>
           </h1>
         </div>
-        <div className="mt-12">
+        <div className="mt-12 px-4 sm:px-0">
           <div className="grid grid-cols-1 gap-5 pt-5 gap-y-12">
             {Benefits.map((item, index) => {
               return (
                 <>
                   <Card
                     isBlurred
-                    className="border-none p-4 bg-background/60 dark:bg-default-100/50  bg-gradient-to-tr from-[#FFB457] to-[#FF705B]"
+                    className="border-none  sm:p-4 bg-background/60 dark:bg-default-100/50  bg-gradient-to-tr from-[#FFB457] to-[#FF705B]"
                     shadow="sm"
                   >
                     <CardBody className=" ">
@@ -131,7 +132,7 @@ Here at HarDan Music Group, we are committed to helping artists bag their rights
         </div>
       </div>
 
-      <div>
+      <div className="px-4 sm:px-0 mb-12 sm:mb-4">
         <Discribe />
       </div>
     </div>

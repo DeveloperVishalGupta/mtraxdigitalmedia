@@ -1,39 +1,49 @@
+import { type } from 'os';
+
 export const siteConfig = {
   name: 'Next.js + HeroUI',
   description: 'Make beautiful websites regardless of your design experience.',
-  navItems: [
+  pageRoutes: [
     {
       label: 'Home',
       href: '/',
+      type: 1,
     },
 
     {
       label: 'Digital store',
       href: '/digital-store',
+      type: 2,
     },
     {
       label: 'Management rights',
       href: '/rights-management/',
+      type: 2,
     },
     {
       label: 'Youtube Monetization',
       href: '/monetization',
+      type: 2,
     },
     {
       label: 'Publishing',
       href: '/publishing',
+      type: 2,
     },
     {
       label: 'Services',
       href: '/services',
+      type: 1,
     },
     {
       label: 'Music distribute',
       href: '/distribute-your-music',
+      type: 1,
     },
     {
       label: 'About',
       href: '/about',
+      type: 1,
     },
     {
       label: 'Pricing',
@@ -42,6 +52,7 @@ export const siteConfig = {
     {
       label: 'Contact',
       href: '/contact',
+      type: 1,
     },
   ],
   navMenuItems: [

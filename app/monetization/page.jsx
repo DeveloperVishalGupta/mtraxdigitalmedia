@@ -120,12 +120,12 @@ export default function MonetizationPage() {
             </h1>
           }
           details={`Make money every single time someone plays your music anywhere on YouTube, and manage your channels effectively.`}
-          componentWidth={'75%'}
+          componentWidth={'100%'}
           btnTitle="Get stared for free"
           showButton
         />
       </div>
-      <div>
+      <div className="px-4 sm:px-0">
         <VideoPromoCard
           image={youtube}
           heading={
@@ -142,12 +142,12 @@ export default function MonetizationPage() {
       <div className="relative w-full overflow-clip">
         <Timeline data={YoutubeMonetizationSteps} />
       </div>
-      <div>
+      <div className="pt-10">
         <HeroSectionTemp
           heading={
             <h1 className={title({ size: 'lg' })}>
               Create Unlimited
-              <span className="text-orange-400">Music </span> & Earn Unlimited{' '}
+              <span className="text-orange-400"> Music </span> & Earn Unlimited{' '}
               <span className="text-orange-400">Money </span> on{' '}
               <span className="text-orange-400">Youtube </span>
             </h1>
@@ -155,14 +155,14 @@ export default function MonetizationPage() {
           details={`Start monetizing your YouTube channels and earn unlimited income whenever someone  streams or uses your music. Get expert assistance to optimize and manage your YouTube   channels efficiently. Skyrocket your music career with HarDan Music Group.
 
 `}
-          componentWidth={'75%'}
+          componentWidth={'90%'}
           // detailsFont={20}
           btnTitle="sign up now"
           showButton
         />
       </div>
 
-      <div>
+      <div className="px-4 sm:px-0">
         <Discribe />
       </div>
     </div>

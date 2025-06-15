@@ -18,8 +18,17 @@ import { GithubIcon, SearchIcon } from '../assets/icons/icons';
 import { ThemeSwitch } from './theme-switch';
 import { siteConfig } from '../config/site';
 import { YouTube } from '../assets/brand-Icons';
+import { useEffect, useState } from 'react';
 
 export const Navbar = () => {
+  const pageRoutes = siteConfig.pageRoutes;
+  const [companyLinks, setCompanyLinks] = useState([]);
+
+  useEffect(() => {
+    if (pageRoutes.length > 0) {
+      setCompanyLinks(pageRoutes.filter((item) => item.type === 1));
+    }
+  }, [pageRoutes]);
   const searchInput = (
     <Input
       aria-label="Search"
@@ -42,7 +51,7 @@ export const Navbar = () => {
   );
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
+    <HeroUINavbar maxWidth="full" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -51,7 +60,7 @@ export const Navbar = () => {
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
-          {siteConfig.navItems.map((item) => (
+          {companyLinks?.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
@@ -75,7 +84,7 @@ export const Navbar = () => {
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
         </NavbarItem>
-        {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
+        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         {/* <NavbarItem className="hidden md:flex">
           <Button
             isExternal
@@ -91,29 +100,19 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+        {/* <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
-        </Link>
+        </Link> */}
         <ThemeSwitch />
-        <NavbarMenuToggle />
+        <NavbarMenuToggle>hello</NavbarMenuToggle>
       </NavbarContent>
 
       <NavbarMenu>
         {searchInput}
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
+          {companyLinks.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? 'primary'
-                    : index === siteConfig.navMenuItems.length - 1
-                      ? 'danger'
-                      : 'foreground'
-                }
-                href="#"
-                size="lg"
-              >
+              <Link color={'foreground'} href={item.href} size="lg">
                 {item.label}
               </Link>
             </NavbarMenuItem>
