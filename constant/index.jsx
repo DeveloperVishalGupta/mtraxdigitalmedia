@@ -364,35 +364,35 @@ export const musicPlatforms = [
 
 export const service = [
   {
-    title: 'worldwide distribution',
+    title: 'Worldwide Music distribution and streaming',
     imageOrder: 1,
     details: [
-      'We’re partnered with hundreds of global music distribution companies to share your music in 200+ countries.',
-      'You release awesome music, and we distribute it everywhere — simple.',
+      'Get your music stream worldwide on all major OTT platforms ',
+      'Your Music, our Distribution: a perfect Music Distribution Junction',
     ],
   },
   {
-    title: 'Global Music Publishing',
+    title: 'Music Publishing Worldwide',
     imageOrder: 2,
     details: [
-      'Let your music do the magic. Publish your music across multiple platforms and earn royalties whenever someone plays or uses your music.',
-      'Pitch your music to the right platforms, and take a nap while we do the magic. We help you collect royalties and revenues on your behalf.',
+      'Get paid for each streaming on any OTT Platform.',
+      'Just Distribute your songs and relax, We\'ll help in growing.',
     ],
   },
   {
-    title: 'YouTube Monetization',
+    title: 'YouTube Channel Monetization and CMS Services',
     imageOrder: 1,
     details: [
-      'Monetize your music and earn more money every time someone plays your music anywhere on YouTube.',
-      'Launch your music on YouTube and earn royalty whenever someone uses your tracks in their videos.',
+      'Monetize your songs as well as get your YouTube Music Channel linked with CMS/MCN Services.',
+      'Royalty for Your arts and positive efforts will be paid periodically.',
     ],
   },
   {
-    title: 'Rights Management',
+    title: 'Copyright Management',
     imageOrder: 2,
     details: [
-      'We help you manage your claims, rights, and royalties efficiently on hundreds of music distribution platforms with 100% accountability.',
-      'Focus on creating some awesome music while we do the heavy lifting. We will help you protect your music rights and fight for claims if any.',
+      'Get your music secured with Strong Content IDs',
+      'Get paid for unauthorised publishing/streaming of your songs on any OTT platforms.',
     ],
   },
 ];

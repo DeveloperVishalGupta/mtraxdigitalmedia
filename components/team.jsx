@@ -34,11 +34,6 @@ function Team() {
                     </p>
                     <div className="mt-12 grid gap-8 px-4 md:grid-cols-3 md:px-0 lg:grid-cols-3 xl:grid-cols-3">
                       {item.data.map((dataItem, dataIndex) => {
-                        console.log(dataItem.image);
-                        console.log(dataItem.gender);
-
-                        console.log(membersPhoto);
-
                         return (
                           <div key={dataIndex} className="flex justify-center ">
                             <div className="w-full max-w-sm overflow-hidden rounded-2xl ">

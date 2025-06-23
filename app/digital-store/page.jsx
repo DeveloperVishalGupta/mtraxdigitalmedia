@@ -20,8 +20,8 @@ export default function DigitalStorePage() {
         <HeroSectionTemp
           heading={
             <div className="flex flex-col gap-4">
-              <h1 className={`${title({ size: 'xl' })} text-orange-400`}>
-                MG Plus Group -
+              <h1 className={`${title({ size: 'xl' })} text-lightThemePrimaryText dark:text-darkThemePrimaryText`}>
+                MTrax Digital Media Group -
               </h1>
               <h1 className={title({ size: 'xl' })}>
                 {' '}
@@ -39,7 +39,7 @@ export default function DigitalStorePage() {
         <div className="flex gap-2 flex-col sm:flex-row justify-center mb-8">
           <h1 className={`${title()} `}>Digital plateforms for</h1>
 
-          <h1 className={`${title()} text-orange-400`}>your music</h1>
+          <h1 className={`${title()} text-lightThemePrimaryText dark:text-darkThemePrimaryText`}>your music</h1>
         </div>
 
         <HoverEffect items={musicPlatforms} page={'distribution'} />
@@ -50,7 +50,7 @@ export default function DigitalStorePage() {
           heading={
             <h1 className={`${title({ size: 'sm' })} font-semibold  `}>
               Your Official Music Video{' '}
-              <span className="text-orange-400">Release Partner</span>
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Release Partner</span>
             </h1>
           }
           details={`Launch your official music videos in style. We help you quickly
@@ -64,7 +64,7 @@ export default function DigitalStorePage() {
       <div className="h-[calc(100vh-6.625rem)] flex justify-center items-start flex-col">
         <div className="flex flex-col gap-5 items-center mx-auto justify-center mb-8">
           <h1 className={`${title()} `}>Promote Your Music in All Major</h1>
-          <h1 className={`${title()} text-orange-400`}>
+          <h1 className={`${title()} text-lightThemePrimaryText dark:text-darkThemePrimaryText`}>
             Social Media Channels
           </h1>
         </div>

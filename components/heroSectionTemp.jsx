@@ -6,7 +6,7 @@ export function HeroSectionTemp({
   details,
   detailsFont,
   componentWidth,
-  btnTitle = 'MG Plus',
+  btnTitle = 'MTrax Digital Media',
   showButton = false,
 }) {
   return (

@@ -10,10 +10,10 @@ import { Image } from '@heroui/image';
 
 export default function ServicesPage() {
   const servicesImage = {
-    'worldwide distribution': worldwideDistributionServiceImage,
-    'Global Music Publishing': musicPublishingServiceImage,
-    'YouTube Monetization': youTubeMonetizationServiceImage,
-    'Rights Management': ManagemenmServiceImage,
+    'Worldwide Music distribution and streaming': worldwideDistributionServiceImage,
+    'Music Publishing Worldwide': musicPublishingServiceImage,
+    'YouTube Channel Monetization and CMS Services': youTubeMonetizationServiceImage,
+    'Copyright Management': ManagemenmServiceImage,
   };
   return (
     <div className="flex flex-col gap-20">
@@ -36,34 +36,30 @@ export default function ServicesPage() {
         {/* 🔸 Content */}
         <div className="relative border p-10 rounded-2xl dark:bg-neutral-800/50 bg-white/15 z-20 text-center mx-4 sm:mx-0 sm:w-3/4 flex flex-col items-center justify-center text-white px-4">
           <div className="flex flex-col gap-4">
-            <h1 id='musicCareer' className={title({ size: 'xl' })}>
-              The Right Place to Push Your{' '}
-              <span className="text-orange-400">Music Career</span> Beyond
-              Limits
+            <h1 id='musicCareer' className={`${title({ size: 'xl' })}  `}>
+              MTrax Digital Media, the best platform to grow your <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Music Career</span>
+             
             </h1>
           </div>
           <p className="text-2xl max-w-2xl leading-10 mt-12 font-semibold dark:text-neutral-200 text-neutral-200">
-            Register an account with us today and take the musician in you to
-            new heights.
+            If you are an artist/publisher/music company owner and think YouTube Channel management and Music Distribution are a big deal, feel free to contact Us.
           </p>
         </div>
       </div>
 
       <div className="gap-20 flex flex-col">
         {service.map((item, index) => {
-          console.log(item.title);
           const splitTitle = item.title.split(' ');
-          console.log(splitTitle);
 
           return (
-            <div className="px-4 sm:px-0">
-              <h1 className={`${title()}  `}>
+            <div key={index} className="px-4 sm:px-0">
+              <h1 className={`${title()} flex flex-wrap justify-center w-3/4 mx-auto`}>
                 {splitTitle.map((item, index) => {
                   const isLast = index === splitTitle.length - 1;
                   return (
                     <span
                       key={index}
-                      className={`${isLast ? 'text-orange-400' : ''} flex  justify-center leading-normal`}
+                      className={`${isLast ? 'text-lightThemePrimaryText dark:text-darkThemePrimaryText' : ''} flex  justify-center leading-normal`}
                     >
                       {item}&nbsp;
                     </span>
@@ -75,7 +71,6 @@ export default function ServicesPage() {
                   className={`${item.imageOrder === 1 ? 'sm:order-1' : 'sm:order-2'} col-span-full sm:col-span-3 `}
                 >
                   <div className="rounded-2xl bg-orange-500 p-2">
-                    {console.log(servicesImage[item.title].src)}
                     <Image
                       className="rounded-xl shadow-sm"
                       isZoomed
@@ -85,7 +80,7 @@ export default function ServicesPage() {
                   </div>
                 </div>
                 <div
-                  className={`${item.imageOrder !== 1 ? 'order-1' : 'order-2'} col-span-full sm:col-span-4 flex items-center gap-5 justify-center flex-col `}
+                  className={`${item.imageOrder !== 1 ? 'order-1' : 'order-2'} col-span-full sm:col-span-4 flex items-start gap-5 justify-center flex-col `}
                 >
                   {item.details.map((detailItem) => {
                     return (
@@ -108,10 +103,9 @@ export default function ServicesPage() {
         <div className="flex flex-col gap-2 justify-center mb-8">
           <h1 className={`${title()} leading-normal`}>
             More Reasons to Choose{' '}
-            <span className={`text-orange-400`}>MG Plus</span>
+            <span className={`text-lightThemePrimaryText dark:text-darkThemePrimaryText`}>MTrax Digital Media</span>
           </h1>
 
-          {/* <h1 className={`${title()} text-orange-400`}>MG Plus</h1> */}
         </div>
         <div>
           <div className="grid sm:grid-cols-2 sm:px-0 px-4 sm:gap-5 pt-5 gap-y-5 sm:gap-y-12">
@@ -119,7 +113,7 @@ export default function ServicesPage() {
               return (
                 <div className="text-start  sm:w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto">
                   <h1
-                    className={`${title({ size: 'sm' })} font-semibold mb-4 text-orange-400  `}
+                    className={`${title({ size: 'sm' })} font-semibold mb-4 text-lightThemePrimaryText dark:text-darkThemePrimaryText  `}
                   >
                     {item.title}
                   </h1>

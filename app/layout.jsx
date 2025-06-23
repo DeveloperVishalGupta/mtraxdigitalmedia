@@ -10,13 +10,6 @@ import { siteConfig } from '../config/site';
 import NextLink from 'next/link';
 import { useEffect, useState } from 'react';
 
-// export const viewport = {
-//   themeColor: [
-//     { media: '(prefers-color-scheme: light)', color: 'white' },
-//     { media: '(prefers-color-scheme: dark)', color: 'black' },
-//   ],
-// };
-
 export default function RootLayout({ children }) {
   const pageRoutes = siteConfig.pageRoutes;
   const [companyLinks, setCompanyLinks] = useState([]);
@@ -43,7 +36,6 @@ export default function RootLayout({ children }) {
             <main className="container mx-auto flex-grow md:px-16 xl:px-28">
               {children}
             </main>
-            {/* <Footer /> */}
             <footer className="w-full px-0 sm:px-36 py-3">
               <div className="grid gap-12 sm:gap-0 sm:grid-cols-3 justify-center items-center">
                 <div className="text-center sm:text-start">
@@ -90,18 +82,18 @@ export default function RootLayout({ children }) {
                       ))}
                   </ul>
                 </div>
-                <div>1</div>
               </div>
 
-              <div className="flex justify-center items-center">
-                <NextLink
+              <div className="flex justify-center pt-12 pb-6 items-center">
+                <div
                   className="flex items-center gap-1 text-current"
-                  href="https://heroui.com?utm_source=next-app-template"
-                  title="heroui.com homepage"
+                  
+                  title="homepage"
                 >
                   <span className="text-default-600">Powered by</span>
-                  <p className="text-primary">MG+</p>
-                </NextLink>
+            <p className="font-semibold text-xl text-inherit text-lightThemeSecondryText dark:text-darkThemeSecondryText "><span className='text-lightThemePrimaryText dark:text-darkThemePrimaryText'>MTrax</span> Digital Media</p>
+
+                </div>
               </div>
             </footer>
           </div>

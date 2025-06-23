@@ -20,7 +20,7 @@ export default function DistributeMusic() {
       <div className="flex justify-center h-[calc(100vh-6.625rem)] flex-col items-center ">
         <div className="flex flex-col gap-4" id='distributeYourMusic'>
           <h1 className={title({ size: 'xl' })}>Distribute your music </h1>
-          <h1 className={`${title({ size: 'xl' })} text-orange-400`}>
+          <h1 className={`${title({ size: 'xl' })} text-lightThemePrimaryText dark:text-darkThemePrimaryText`}>
             Everywhere
           </h1>
         </div>
@@ -33,10 +33,8 @@ export default function DistributeMusic() {
         <div className="flex flex-col sm:flex-row gap-2 justify-center mb-8">
           <h1 className={`${title()} `}>Digital plateforms for</h1>
 
-          <h1 className={`${title()} text-orange-400`}>your music</h1>
+          <h1 className={`${title()} text-lightThemePrimaryText dark:text-darkThemePrimaryText`}>your music</h1>
         </div>
-        {console.log(musicPlatforms)}
-
         <HoverEffect items={musicPlatforms} page={'distribution'} />
       </div>
       <div className="  px-4 sm:px-0">
@@ -45,7 +43,7 @@ export default function DistributeMusic() {
           heading={
             <h1 className={`${title({ size: 'sm' })} font-semibold  `}>
               Your Official Music Video{' '}
-              <span className="text-orange-400">Release Partner</span>
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Release Partner</span>
             </h1>
           }
           details={`Launch your official music videos in style. We help you quickly
@@ -60,11 +58,11 @@ export default function DistributeMusic() {
         <div className="flex flex-col gap-5 items-center mx-auto justify-center mb-8">
           <h1 className={`${title()} `}>
             Promote Your Music in All Major{' '}
-            <span className={`sm:hidden leading-relaxed text-orange-400`}>
+            <span className={`sm:hidden leading-relaxed text-lightThemePrimaryText dark:text-darkThemePrimaryText`}>
               Social Media Channels
             </span>
           </h1>
-          <h1 className={`${title()} text-orange-400 hidden md:block`}>
+          <h1 className={`${title()} text-lightThemePrimaryText dark:text-darkThemePrimaryText hidden md:block`}>
             Social Media Channels
           </h1>
         </div>

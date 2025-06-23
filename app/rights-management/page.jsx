@@ -29,7 +29,7 @@ export default function RightsManagementPage() {
           heading={
             <h1 className={title({ size: 'lg' })}>
               We take 100%{' '}
-              <span className="text-orange-400">responsibility </span>
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">responsibility </span>
               for your music
             </h1>
           }
@@ -46,7 +46,7 @@ export default function RightsManagementPage() {
           heading={
             <h1 className={title({ size: 'lg' })}>
               Your Digital Rights Manager and{' '}
-              <span className="text-orange-400">Partner</span>
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Partner</span>
             </h1>
           }
           details={`We know how hard it is for musicians and artists to create masterpieces. Is that all? No, protecting your digital music rights and royalties across various platforms globally is a hectic job. And, if you do not manage it properly, others start copying your music and distributing it for free - putting all your efforts in vain. 
@@ -57,8 +57,8 @@ Here at HarDan Music Group, we are committed to helping artists bag their rights
       <div>
         <div className="w-4/5 sm:w-3/5 leading-10 mx-auto">
           <h1 className={title({ size: 'lg' })}>
-            Manage Your <span className="text-orange-400">Rights </span> &{' '}
-            <span className="text-orange-400">protect </span> your work
+            Manage Your <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Rights </span> &{' '}
+            <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">protect </span> your work
           </h1>
         </div>
         <div className="mt-12">
@@ -69,7 +69,7 @@ Here at HarDan Music Group, we are committed to helping artists bag their rights
                   <div className="flex gap-3 items-center">
                     <span>{servicesImage[item.title]}</span>
                     <h1
-                      className={`${title({ size: 'sm' })} font-semibold  text-orange-400  `}
+                      className={`${title({ size: 'sm' })} font-semibold  text-lightThemePrimaryText dark:text-darkThemePrimaryText  `}
                     >
                       {item.title}
                     </h1>
@@ -88,7 +88,7 @@ Here at HarDan Music Group, we are committed to helping artists bag their rights
       <div>
         <div className="w-3/5  leading-10 mx-auto">
           <h1 className={title({ size: 'lg' })}>
-            Your <span className="text-orange-400">Benefits </span>
+            Your <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Benefits </span>
           </h1>
         </div>
         <div className="mt-12 px-4 sm:px-0">
@@ -107,7 +107,6 @@ Here at HarDan Music Group, we are committed to helping artists bag their rights
                           <Image
                             alt="Album cover"
                             className="object-cover rounded-lg overflow-hidden"
-                            // height={200}
                             shadow="md"
                             src={benefits[item.title]}
                             width="100%"

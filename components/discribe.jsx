@@ -10,7 +10,7 @@ function Discribe() {
       <div className="flex justify-center items-center col-span-full sm:col-span-4">
         <div className="px-4 text-center sm:text-start md:px-12 py-8 flex flex-col gap-5">
           <h1 className={`${title({ size: 'sm' })} font-semibold  `}>
-            Let MG Plus drive the success of your next release
+            Let MTrax Digital Media drive the success of your next release
           </h1>
           <p className="text-lg font-semibold dark:text-white text-gray-500">
             Elevate your music with a platform designed to deliver results

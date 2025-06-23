@@ -76,10 +76,10 @@ export default function PublishingPage() {
         heading={
           <div className="flex flex-col gap-4">
             <h1 className={title({ size: 'xl' })}>
-              Publish Your <span className="text-orange-400">Music</span>
+              Publish Your <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Music</span>
             </h1>
             <h1 className={`${title({ size: 'xl' })}`}>
-              Make <span className="text-orange-400">Money</span>
+              Make <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Money</span>
             </h1>
           </div>
         }
@@ -90,7 +90,7 @@ export default function PublishingPage() {
       <div className="flex flex-col items-center ">
         <div className="flex flex-col gap-4">
           <h1 className={title({})}>
-            How can I <span className="text-orange-400">publish</span> my music?
+            How can I <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">publish</span> my music?
           </h1>
         </div>
         <div className="relative w-full overflow-clip">
@@ -101,7 +101,7 @@ export default function PublishingPage() {
       <div>
         <div className="flex flex-col gap-2 justify-center mb-8">
           <h1 className={`${title()} `}>
-            Music <span className="text-orange-400">Publishing Royalties</span>{' '}
+            Music <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Publishing Royalties</span>{' '}
             You Get{' '}
           </h1>
         </div>
@@ -111,7 +111,7 @@ export default function PublishingPage() {
               return (
                 <div className="text-start w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto">
                   <h1
-                    className={`${title({ size: 'sm' })} font-semibold mb-4  text-orange-400  `}
+                    className={`${title({ size: 'sm' })} font-semibold mb-4  text-lightThemePrimaryText dark:text-darkThemePrimaryText  `}
                   >
                     {item.title}
                   </h1>
@@ -131,7 +131,7 @@ export default function PublishingPage() {
           heading={
             <h1 className={`${title({ size: 'sm' })} font-semibold  `}>
               Your Best Music
-              <span className="text-orange-400"> Publishing Partner </span>
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText"> Publishing Partner </span>
             </h1>
           }
           details={`Are you an artist? No more worries about publishing music or collecting royalties. We help you publish music on the right platform and get you the royalties you deserve.`}
@@ -144,7 +144,7 @@ export default function PublishingPage() {
               <h1 className={title({ size: 'lg' })}>Collect your publishing</h1>
               <h1 className={`${title({ size: 'lg' })}`}>
                 royalties with{' '}
-                <span className="text-orange-400"> authority</span>
+                <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText"> authority</span>
               </h1>
             </div>
           }
