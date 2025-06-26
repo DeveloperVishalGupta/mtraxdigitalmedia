@@ -115,8 +115,10 @@ export default function MonetizationPage() {
         <HeroSectionTemp
           heading={
             <h1 className={title({ size: 'xl' })}>
-              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">YouTube Monetization </span> &
-              Channel Management
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                YouTube Monetization{' '}
+              </span>{' '}
+              & Channel Management
             </h1>
           }
           details={`Make money every single time someone plays your music anywhere on YouTube, and manage your channels effectively.`}
@@ -131,8 +133,15 @@ export default function MonetizationPage() {
           heading={
             <h1 className={title({ size: 'lg' })}>
               YouTube
-              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText"> Monetization</span> &{' '}
-              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText"> Partner Program</span>
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                {' '}
+                Monetization
+              </span>{' '}
+              &{' '}
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                {' '}
+                Partner Program
+              </span>
             </h1>
           }
           details={`We support thousands of creators like you to get the revenue you deserve. With an expert team to distribute your music into YouTube Content ID, we help you optimize, manage, and monetize your YouTube channels and protect your copyrights and royalties.`}
@@ -147,9 +156,18 @@ export default function MonetizationPage() {
           heading={
             <h1 className={title({ size: 'lg' })}>
               Create Unlimited
-              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText"> Music </span> & Earn Unlimited{' '}
-              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Money </span> on{' '}
-              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Youtube </span>
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                {' '}
+                Music{' '}
+              </span>{' '}
+              & Earn Unlimited{' '}
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                Money{' '}
+              </span>{' '}
+              on{' '}
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                Youtube{' '}
+              </span>
             </h1>
           }
           details={`Start monetizing your YouTube channels and earn unlimited income whenever someone  streams or uses your music. Get expert assistance to optimize and manage your YouTube   channels efficiently. Skyrocket your music career with HarDan Music Group.

@@ -4,7 +4,6 @@ function LinkListComponent({ data, vertical = false }) {
       <ul
         className={`${vertical ? 'flex-col' : ''} flex  gap-4 justify-start ml-2`}
       >
-
         {data
           .sort((a, b) => a.label.localeCompare(b.label))
           .map((item, index) => (

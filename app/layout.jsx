@@ -87,12 +87,15 @@ export default function RootLayout({ children }) {
               <div className="flex justify-center pt-12 pb-6 items-center">
                 <div
                   className="flex items-center gap-1 text-current"
-                  
                   title="homepage"
                 >
                   <span className="text-default-600">Powered by</span>
-            <p className="font-semibold text-xl text-inherit text-lightThemeSecondryText dark:text-darkThemeSecondryText "><span className='text-lightThemePrimaryText dark:text-darkThemePrimaryText'>MTrax</span> Digital Media</p>
-
+                  <p className="font-semibold text-xl text-inherit text-lightThemeSecondryText dark:text-darkThemeSecondryText ">
+                    <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                      MTrax
+                    </span>{' '}
+                    Digital Media
+                  </p>
                 </div>
               </div>
             </footer>

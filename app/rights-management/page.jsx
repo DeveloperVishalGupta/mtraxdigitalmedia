@@ -29,7 +29,9 @@ export default function RightsManagementPage() {
           heading={
             <h1 className={title({ size: 'lg' })}>
               We take 100%{' '}
-              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">responsibility </span>
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                responsibility{' '}
+              </span>
               for your music
             </h1>
           }
@@ -46,7 +48,9 @@ export default function RightsManagementPage() {
           heading={
             <h1 className={title({ size: 'lg' })}>
               Your Digital Rights Manager and{' '}
-              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Partner</span>
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                Partner
+              </span>
             </h1>
           }
           details={`We know how hard it is for musicians and artists to create masterpieces. Is that all? No, protecting your digital music rights and royalties across various platforms globally is a hectic job. And, if you do not manage it properly, others start copying your music and distributing it for free - putting all your efforts in vain. 
@@ -57,8 +61,15 @@ Here at HarDan Music Group, we are committed to helping artists bag their rights
       <div>
         <div className="w-4/5 sm:w-3/5 leading-10 mx-auto">
           <h1 className={title({ size: 'lg' })}>
-            Manage Your <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Rights </span> &{' '}
-            <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">protect </span> your work
+            Manage Your{' '}
+            <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+              Rights{' '}
+            </span>{' '}
+            &{' '}
+            <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+              protect{' '}
+            </span>{' '}
+            your work
           </h1>
         </div>
         <div className="mt-12">
@@ -88,7 +99,10 @@ Here at HarDan Music Group, we are committed to helping artists bag their rights
       <div>
         <div className="w-3/5  leading-10 mx-auto">
           <h1 className={title({ size: 'lg' })}>
-            Your <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Benefits </span>
+            Your{' '}
+            <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+              Benefits{' '}
+            </span>
           </h1>
         </div>
         <div className="mt-12 px-4 sm:px-0">

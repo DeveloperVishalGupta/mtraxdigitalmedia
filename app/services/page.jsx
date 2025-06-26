@@ -10,9 +10,11 @@ import { Image } from '@heroui/image';
 
 export default function ServicesPage() {
   const servicesImage = {
-    'Worldwide Music distribution and streaming': worldwideDistributionServiceImage,
+    'Worldwide Music distribution and streaming':
+      worldwideDistributionServiceImage,
     'Music Publishing Worldwide': musicPublishingServiceImage,
-    'YouTube Channel Monetization and CMS Services': youTubeMonetizationServiceImage,
+    'YouTube Channel Monetization and CMS Services':
+      youTubeMonetizationServiceImage,
     'Copyright Management': ManagemenmServiceImage,
   };
   return (
@@ -36,13 +38,17 @@ export default function ServicesPage() {
         {/* 🔸 Content */}
         <div className="relative border p-10 rounded-2xl dark:bg-neutral-800/50 bg-white/15 z-20 text-center mx-4 sm:mx-0 sm:w-3/4 flex flex-col items-center justify-center text-white px-4">
           <div className="flex flex-col gap-4">
-            <h1 id='musicCareer' className={`${title({ size: 'xl' })}  `}>
-              MTrax Digital Media, the best platform to grow your <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">Music Career</span>
-             
+            <h1 id="musicCareer" className={`${title({ size: 'xl' })}  `}>
+              MTrax Digital Media, the best platform to grow your{' '}
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                Music Career
+              </span>
             </h1>
           </div>
           <p className="text-2xl max-w-2xl leading-10 mt-12 font-semibold dark:text-neutral-200 text-neutral-200">
-            If you are an artist/publisher/music company owner and think YouTube Channel management and Music Distribution are a big deal, feel free to contact Us.
+            If you are an artist/publisher/music company owner and think YouTube
+            Channel management and Music Distribution are a big deal, feel
+            free to contact Us.
           </p>
         </div>
       </div>
@@ -53,7 +59,9 @@ export default function ServicesPage() {
 
           return (
             <div key={index} className="px-4 sm:px-0">
-              <h1 className={`${title()} flex flex-wrap justify-center w-3/4 mx-auto`}>
+              <h1
+                className={`${title()} flex flex-wrap justify-center w-3/4 mx-auto`}
+              >
                 {splitTitle.map((item, index) => {
                   const isLast = index === splitTitle.length - 1;
                   return (
@@ -103,9 +111,12 @@ export default function ServicesPage() {
         <div className="flex flex-col gap-2 justify-center mb-8">
           <h1 className={`${title()} leading-normal`}>
             More Reasons to Choose{' '}
-            <span className={`text-lightThemePrimaryText dark:text-darkThemePrimaryText`}>MTrax Digital Media</span>
+            <span
+              className={`text-lightThemePrimaryText dark:text-darkThemePrimaryText`}
+            >
+              MTrax Digital Media
+            </span>
           </h1>
-
         </div>
         <div>
           <div className="grid sm:grid-cols-2 sm:px-0 px-4 sm:gap-5 pt-5 gap-y-5 sm:gap-y-12">

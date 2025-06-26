@@ -19,7 +19,6 @@ import { ThemeSwitch } from './theme-switch';
 import { siteConfig } from '../config/site';
 import { YouTube } from '../assets/brand-Icons';
 import { useEffect, useState } from 'react';
-import SearchPage from './search';
 import { headings } from '../constant';
 
 export const Navbar = () => {
@@ -28,19 +27,19 @@ export const Navbar = () => {
   const [filtered, setFiltered] = useState([]);
   const [query, setQuery] = useState('');
 
- const handleChange = (e) => {
+  const handleChange = (e) => {
     const value = e.target.value;
     if (value) {
-     setQuery(value);
-    const suggestions = headings.filter(item =>
-      item.title.toLowerCase().includes(value.toLowerCase())
-    );
+      setQuery(value);
+      const suggestions = headings.filter((item) =>
+        item.title.toLowerCase().includes(value.toLowerCase())
+      );
 
-    setFiltered(suggestions);
+      setFiltered(suggestions);
     } else {
       setQuery(value);
       setFiltered([]);
-   }
+    }
   };
 
   const handleSelect = (item) => {
@@ -54,28 +53,28 @@ export const Navbar = () => {
   }, [pageRoutes]);
   const searchInput = (
     <div>
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: 'bg-default-100',
-        input: 'text-sm',
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={['command']}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
+      <Input
+        aria-label="Search"
+        classNames={{
+          inputWrapper: 'bg-default-100',
+          input: 'text-sm',
+        }}
+        endContent={
+          <Kbd className="hidden lg:inline-block" keys={['command']}>
+            K
+          </Kbd>
+        }
+        labelPlacement="outside"
+        placeholder="Search..."
+        startContent={
+          <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
+        }
         type="search"
-         value={query}
+        value={query}
         onChange={handleChange}
       />
-    
-        {filtered.length > 0 && (
+
+      {filtered.length > 0 && (
         <ul className="border dark:bg-black bg-white rounded mt-2 shadow absolute right-6 max-w-96">
           {filtered.map((item, index) => (
             <li
@@ -88,7 +87,7 @@ export const Navbar = () => {
           ))}
         </ul>
       )}
-      </div>
+    </div>
   );
 
   return (
@@ -96,17 +95,21 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <p className="font-bold text-xl text-inherit text-lightThemeSecondryText dark:text-darkThemeSecondryText "><span className='text-lightThemePrimaryText dark:text-darkThemePrimaryText'>MTrax</span> Digital Media</p>
+            <p className="font-bold text-xl text-inherit text-lightThemeSecondryText dark:text-darkThemeSecondryText ">
+              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                MTrax
+              </span>{' '}
+              Digital Media
+            </p>
           </NextLink>
         </NavbarBrand>
-       
       </NavbarContent>
 
       <NavbarContent
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-         <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        <ul className="hidden lg:flex gap-4 justify-start ml-2">
           {companyLinks?.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink

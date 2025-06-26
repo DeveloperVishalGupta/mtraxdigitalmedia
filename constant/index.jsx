@@ -376,7 +376,7 @@ export const service = [
     imageOrder: 2,
     details: [
       'Get paid for each streaming on any OTT Platform.',
-      'Just Distribute your songs and relax, We\'ll help in growing.',
+      "Just Distribute your songs and relax, We'll help in growing.",
     ],
   },
   {
@@ -475,14 +475,41 @@ export const Benefits = [
 ];
 
 export const headings = [
-  { title: 'The Right Place to Push Your Music Career Beyond Limits', page: '/services', id: 'musicCareer' },
-  { title: 'worldwide distribution', page: '/services', id: 'worldwideDistribution' },
-  { title: 'Global Music Publishing', page: '/services', id: 'globalMusicPublishing' },
-  { title: 'YouTube Monetization', page: '/services', id: 'youTubeMonetization' },
+  {
+    title: 'The Right Place to Push Your Music Career Beyond Limits',
+    page: '/services',
+    id: 'musicCareer',
+  },
+  {
+    title: 'worldwide distribution',
+    page: '/services',
+    id: 'worldwideDistribution',
+  },
+  {
+    title: 'Global Music Publishing',
+    page: '/services',
+    id: 'globalMusicPublishing',
+  },
+  {
+    title: 'YouTube Monetization',
+    page: '/services',
+    id: 'youTubeMonetization',
+  },
   { title: 'Rights Management', page: '/services', id: 'rightsManagement' },
-  { title: 'Distribute your music Everywhere', page: '/distribute-your-music', id: '  ' },
+  {
+    title: 'Distribute your music Everywhere',
+    page: '/distribute-your-music',
+    id: '  ',
+  },
   { title: 'About Us', page: '/about', id: 'about-us' },
   { title: 'Our Team', page: '/about', id: 'our-team' },
   { title: 'Web Development', page: '/services', id: 'web-dev' },
   { title: 'Contact Us', page: '/contact', id: 'contact-us' },
+];
+
+export const contactNumbers = [
+  '8655165656',
+  '8655167676',
+  '9167597776',
+  '9167598886',
 ];
