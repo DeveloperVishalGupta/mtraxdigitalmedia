@@ -11,7 +11,7 @@ export const siteConfig = {
     },
 
     {
-      label: 'Digital store',
+      label: 'Digital stores',
       href: '/digital-store',
       type: 2,
     },
@@ -21,7 +21,7 @@ export const siteConfig = {
       type: 2,
     },
     {
-      label: 'Youtube Monetization',
+      label: 'Youtube/Facebook Monetization',
       href: '/monetization',
       type: 2,
     },
@@ -36,7 +36,7 @@ export const siteConfig = {
       type: 1,
     },
     {
-      label: 'Music distribute',
+      label: 'Music Distribution',
       href: '/distribute-your-music',
       type: 1,
     },

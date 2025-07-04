@@ -79,10 +79,9 @@ export default function DigitalStorePage() {
           </h1>
         </div>
         <p className="text-2xl leading-10 mt-18 font-medium dark:text-neutral-400 text-neutral-500">
-          Distribute your music to the world's most popular and biggest social
-          media platforms effortlessly with HarDan Music Group, and manage your
-          royalties and rights hassle-free. So create your free account today,
-          and let's rock and roll!
+      Distribute your music to the world's most popular and biggest social media platforms effortlessly with us, and manage your royalties and rights hassle-free. So Contact us today, and let's rock and roll!
+
+
         </p>
         <div className="socialmedia flex justify-around items-center gap-8 flex-wrap px-4 sm:px-0 sm:w-1/2 mx-auto  mt-12 icons">
           <Instagram />

@@ -15,7 +15,7 @@ export default function PublishingPage() {
             <h1 className={title()}>signup & Register</h1>
           </div>
           <p className="text-2xl max-w-2xl leading-10 mt-24 font-semibold dark:text-neutral-400 text-neutral-500">
-            Just sign up and register your account with HarDan music Group. Now,
+            Just sign up and register your account with ous Group. Now,
             you can access our easy-to-use dashboard and 100+ stores to
             distribute your music worldwide.
           </p>
@@ -122,7 +122,7 @@ export default function PublishingPage() {
           <div className="grid sm:grid-cols-2 gap-5 pt-5 gap-y-5 sm:gap-y-12">
             {publishingRoyalties.map((item, index) => {
               return (
-                <div className="text-start w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto">
+                <div key={index} className="text-start w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto">
                   <h1
                     className={`${title({ size: 'sm' })} font-semibold mb-4  text-lightThemePrimaryText dark:text-darkThemePrimaryText  `}
                   >

@@ -31,9 +31,10 @@ export default function DistributeMusic() {
           platforms in the world.
         </p>
       </div>
-      <div>
+      <div className='lg:px-28'>
+      <div className=''>
         <div className="flex flex-col sm:flex-row gap-2 justify-center mb-8">
-          <h1 className={`${title()} `}>Digital plateforms for</h1>
+          <h1 className={`${title()} `}>Digital platforms for</h1>
 
           <h1
             className={`${title()} text-lightThemePrimaryText dark:text-darkThemePrimaryText`}
@@ -48,13 +49,13 @@ export default function DistributeMusic() {
           image={singer}
           heading={
             <h1 className={`${title({ size: 'sm' })} font-semibold  `}>
-              Your Official Music Video{' '}
+              Your Official Music{' '}
               <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
                 Release Partner
               </span>
             </h1>
           }
-          details={`Launch your official music videos in style. We help you quickly
+          details={`Launch your official music in style. We help you quickly
                 get your music videos live on the most popular social platforms
                 and earn royalties. We have you covered from setup and launch to
                 video uploads and rights management.`}
@@ -80,8 +81,8 @@ export default function DistributeMusic() {
         </div>
         <p className="text-2xl leading-10 mt-18 font-medium dark:text-neutral-400 text-neutral-500">
           Distribute your music to the world's most popular and biggest social
-          media platforms effortlessly with HarDan Music Group, and manage your
-          royalties and rights hassle-free. So create your free account today,
+          media platforms effortlessly with us, and manage your
+          royalties and rights hassle-free. So Contact us today,
           and let's rock and roll!
         </p>
         <div className="socialmedia flex justify-around flex-wrap items-center gap-8 px-4 sm:px-0 sm:w-1/2 mx-auto  mt-12 icons">
@@ -95,7 +96,8 @@ export default function DistributeMusic() {
 
       <div className="px-4 sm:px-0">
         <Discribe />
-      </div>
+        </div>
+        </div>
     </div>
   );
 }

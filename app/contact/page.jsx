@@ -8,6 +8,9 @@ import GetInTouch from '../../components/GetInTouch';
 import { Card, CardBody } from '@heroui/card';
 import GoogleMap from '../../components/GoogleMap';
 import { contactNumbers } from '../../constant';
+import { WhatsappIcon } from '../../assets/brand-Icons';
+import { PhoneIcon } from '../../assets/icons/icons';
+import Link from 'next/link';
 // import {Card, CardHeader, CardBody, CardFooter} from "@heroui/react";
 
 export const prefrences = [
@@ -40,7 +43,7 @@ export default function ContactPage() {
     }
   };
   return (
-    <div className="flex flex-col gap-y-10 ">
+    <div className="flex flex-col gap-y-10 lg:px-28">
        <div className="px-4 flex justify-center text-center md:text-start">
           <h1 className={title({  })}>Get In Touch</h1>
          
@@ -135,24 +138,58 @@ export default function ContactPage() {
                     Contact Info
                   </h3>
                   <div className="grid text-center grid-cols-2">
-                    {contactNumbers.map((item, index) => {
-                      return (
+              {contactNumbers.map((item, index) => {                    
+                      if (item.type === 1) {
+                        return (
                         <div key={index}>
-                          <div className="border-neutral-700 rounded-md  bg-neutral-600 my-2 mx-4 ">
-                            <a
-                              href={`tel:+91${item}`}
+                            <div className="border-neutral-700 rounded-md  flex items-center justify-center gap-2  bg-neutral-600 my-2 mx-4 ">
+                              <PhoneIcon color={'#fff'}/>
+                            <Link
+                              href={`tel:+91${item.phone}`}
                               className="text-white py-2 block"
-                            >{`(+91) ${item}`}</a>
+                            >{`(+91) ${item.phone}`}</Link>
                           </div>
                         </div>
                       );
+                      } else {
+                        const message = encodeURIComponent(
+  `Hello!! MTrax Digital Media
+      
+I'm interested in your services.
+Could you please share more details?
+
+Here's my contact info:
+Phone: +91 XXXXX XXXXX
+Email: myEmail@gmail.com  
+
+Looking forward to hearing from you. Thanks!`
+);
+    const whatsappUrl = `https://wa.me/91${item.phone}?text=${message}`;
+                        return (
+                        <div key={index}>
+                            <div className="border-neutral-700 rounded-md flex items-center justify-center gap-2 bg-neutral-600 my-2 mx-4 ">
+                              <WhatsappIcon/>
+                              <Link
+                                target='_blank'
+                              href={whatsappUrl}
+                              className="text-white py-2 block"
+                            >{`(+91) ${item.phone}`}</Link>
+                          </div>
+                        </div>
+                      );
+                      }
+                      
                     })}
                   </div>
 
                   <div className="my-4">
-                    <a
-                      href="mailto:spatikachemburdesk@gmail.com"
-                      className="flex items-center text-white hover:text-rose-500 transition-colors"
+              <Link 
+                target='_blank'
+                href={`mailto:mtraxdigitalmedia@gmail.com?subject=${encodeURIComponent("Music Service Inquiry")}&body=${encodeURIComponent("Hello!! MTrax Digital Media, \n\n I'm interested in your services.\nCould you please share more details?\n\nHere's my contact info:\nPhone: +91 XXXXX XXXXX\nEmail: myEmail@gmail.com\n\nLooking forward to hearing from you. Thanks!"  
+                 )}`}
+
+                      // href="mailto:mtraxdigitalmedia@gmail.com"
+                      className="flex items-center transition-colors"
                     >
                       <svg
                         className="w-6 h-6 mr-3"
@@ -167,18 +204,17 @@ export default function ContactPage() {
                           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                         />
                       </svg>
-                      spatikachemburdesk@gmail.com
-                    </a>
+                     mtraxdigitalmedia@gmail.com
+                    </Link>
                   </div>
                 </div>
                 <div className="bg-neutral-800 p-6 rounded-lg">
                   <h3 className="text-2xl font-semibold text-white mb-4">Hours</h3>
                   <div className="space-y-2">
                     <p className="text-neutral-400">
-                      Monday - Friday: 9:00 AM - 8:00 PM
+                      Monday - Friday: 10:00 AM - 8:00 PM
                     </p>
-                    <p className="text-neutral-400">Saturday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-neutral-400">Sunday: 10:00 AM - 5:00 PM</p>
+                    <p className="text-neutral-400">Saturday: 10:00 AM - 01:00 PM</p>
                   </div>
                 </div>
 

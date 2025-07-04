@@ -1,21 +1,14 @@
 import { details } from 'framer-motion/client';
+import { type } from 'os';
+import { title } from 'process';
 
 export const getInTouch = [
   {
     type: 'info mail',
-    contactSorce: 'info@example.com',
-    showText: 'info@example.com',
+    contactSorce: 'mtraxdigitalmedia@gmail.com',
+    showText: 'mtraxdigitalmedia@gmail.com',
   },
-  {
-    type: 'support mail',
-    contactSorce: 'support@example.com',
-    showText: 'support@example.com',
-  },
-  {
-    type: 'whatsapp message',
-    contactSorce: '0123456789',
-    showText: '0123456789 (WhatsApp only)',
-  },
+ 
 ];
 
 export const Company = {
@@ -368,7 +361,7 @@ export const service = [
     imageOrder: 1,
     details: [
       'Get your music stream worldwide on all major OTT platforms ',
-      'Your Music, our Distribution: a perfect Music Distribution Junction',
+      'Your Music, our Distribution: a perfect Junction',
     ],
   },
   {
@@ -400,7 +393,7 @@ export const service = [
 export const reasonsToChoose = [
   {
     title: 'Unlimited Release on the go',
-    detail: 'Release unlimited music and songs on hundreds of platforms.',
+    detail: 'Release unlimited music and songs over hundreds of platforms.',
   },
   {
     title: 'Free Detailed Sales Report',
@@ -415,6 +408,27 @@ export const reasonsToChoose = [
     detail:
       "Publish your music in the world's best stores no matter where you are.",
   },
+];
+
+export const otherServises = [
+  {    title: 'Digital Content Creation',  },
+  {title: 'Content Licensing & Rights Management',},
+  {title: 'Digital Marketing',},
+  {    title: 'Audio/Video Production', },
+   {
+    title: 'Hindi/Bhojpuri script & song lyrics composition',
+    
+  },
+   {
+    title: 'poster designing',
+   
+  },
+   {
+    title: 'Promotions & Advertisement and other Digital Media Solutions',
+  
+  },
+  { title: 'IPRS Registration for Artist, Composer & Publishers' }
+  
 ];
 
 export const publishingRoyalties = [
@@ -436,7 +450,7 @@ export const publishingRoyalties = [
   {
     title: 'Neighbouring  Rights',
     detail:
-      'Secure your Neighbouring Rights with HarDan Music today. Our experts help you earn royalties for all your master recordings and contributions.',
+      'Secure your Neighbouring Rights with ous today. Our experts help you earn royalties for all your master recordings and contributions.',
   },
 ];
 
@@ -508,8 +522,31 @@ export const headings = [
 ];
 
 export const contactNumbers = [
-  '8655165656',
-  '8655167676',
-  '9167597776',
-  '9167598886',
+  {
+    phone: '9326719497',
+  type:1
+  },
+
+  {
+    phone: '9326719497',
+  type:2
+  },
+
+];
+
+export const top6Musics = [
+  {
+    link: 'https://www.youtube.com/embed/CfkeKU-9T-M?si=G0NzpD7HOYGU-y6y',
+  },
+  {
+    link: 'https://www.youtube.com/embed/ZfObOBL1aGg?si=WrqQrt4_ItpcVXOb',
+  },
+  {
+    link: 'https://www.youtube.com/embed/cXpkvG4MuW4?si=xdovX90pVqhTaay9',
+  },
+  {
+    link: 'https://www.youtube.com/embed/LWkPAvE6wMs?si=5-rs0xeo3Z689P1Z',
+  },
+  { link: 'https://www.youtube.com/embed/61TrcabmVkw?si=0N5-s96DLLFtMA-s' },
+  {link:'https://www.youtube.com/embed/lV6y34Cof_4?si=bgOtekU883SyU-7j'}
 ];

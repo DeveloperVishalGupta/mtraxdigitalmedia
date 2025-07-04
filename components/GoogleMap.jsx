@@ -2,6 +2,7 @@ import {
   GoogleMap as MapComponent,
   LoadScript,
   Marker,
+  GoogleMap,
 } from '@react-google-maps/api';
 
 const containerStyle = {
@@ -15,16 +16,18 @@ const location = {
 };
 
 const MyGoogleMap = () => {
+  console.log(process.env.NEXT_PUBLIC_MAPBOX_TOKEN);
+  
   return (
-    <LoadScript googleMapsApiKey={'AIzaSyBiadaqtZvi6P8B-U3oe53tTKoFmgqIbvc'}>
-      <MapComponent
-        mapContainerStyle={containerStyle}
-        center={location}
-        zoom={15}
-      >
-        <Marker position={location} />
-      </MapComponent>
-    </LoadScript>
+   <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+  <GoogleMap
+    mapContainerStyle={containerStyle}
+    center={location}
+    zoom={15}
+  >
+    <Marker position={location} />
+  </GoogleMap>
+</LoadScript>
   );
 };
 
