@@ -7,6 +7,7 @@ import youTubeMonetizationServiceImage from '../../assets/images/services-3.jpg'
 import ManagemenmServiceImage from '../../assets/images/services-4.png';
 import { CircleCheck } from '../../assets/icons/icons';
 import { Image } from '@heroui/image';
+import TextOnGlass from '../../components/TextOnGlass';
 
 export default function ServicesPage() {
   const servicesImage = {
@@ -36,10 +37,15 @@ export default function ServicesPage() {
         <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10" />
 
         {/* 🔸 Content */}
-        <div className="relative border p-10 rounded-2xl dark:bg-neutral-800/50 bg-white/15 z-20 text-center mx-4 sm:mx-0 sm:w-3/4 md:w-7/12 flex flex-col items-center justify-center text-white px-4">
+         <TextOnGlass
+          primaryPoint={'MTrax Digital Media'}
+          heading={', the best platform to grow your Music Career'}
+        detail={'If you are an artist/publisher/music company owner and think YouTube Channel management and Music Distribution a big deal, feel free to contact Us.'}
+        />
+        {/* <div className="relative border p-10 rounded-2xl dark:bg-neutral-800/50 bg-white/15 z-20 text-center mx-4 sm:mx-0 sm:w-3/4 md:w-7/12 flex flex-col items-center justify-center text-white px-4">
           <div className="flex flex-col gap-4">
             <h1 id="musicCareer" className={`${title({ size: 'xl' })}  `}>
-              MTrax Digital Media, the best platform to grow your{' '}
+              MTrax Digital Media{' '}
               <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
                 Music Career
               </span>
@@ -50,7 +56,7 @@ export default function ServicesPage() {
             Channel management and Music Distribution  a big deal, feel
             free to contact Us.
           </p>
-        </div>
+        </div> */}
       </div>
 
       <div className="gap-20 flex flex-col lg:px-14 xl:px-24">
@@ -149,9 +155,9 @@ export default function ServicesPage() {
           <div className="grid sm:grid-cols-2 sm:px-0 px-4 sm:gap-5 pt-5 gap-y-5 sm:gap-y-12 lg:px-36">
             {otherServises.map((item, index) => {
               return (
-                <div key={index} className="text-start  sm:w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto">
+                <div key={index} className="text-start sm:w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto">
                   <h1
-                    className={`text-2xl capitalize font-semibold mb-4`}
+                    className={`text-2xl text-lightThemeSecondryText dark:text-darkThemeSecondryText capitalize font-semibold mb-4`}
                   >
                     {item.title}
                   </h1>
