@@ -8,7 +8,6 @@ export const getInTouch = [
     contactSorce: 'mtraxdigitalmedia@gmail.com',
     showText: 'mtraxdigitalmedia@gmail.com',
   },
- 
 ];
 
 export const Company = {
@@ -354,6 +353,33 @@ export const musicPlatforms = [
     bgColor: '#f57c00',
   },
 ];
+export const whatOffers = [
+  {
+    title: 'Global Digital Music Distribution',
+    description:
+      'Distribute your music to top platforms like Spotify, Apple Music, and Amazon worldwide with a single upload.',
+  },
+  {
+    title: 'Real-Time Analytics & Royalty Reports',
+    description:
+      'Track your streams, earnings, and listener data with accurate, real-time analytics and transparent royalty reports.',
+  },
+  {
+    title: 'Promotional Support & Monetization Services',
+    description:
+      'Boost your reach with marketing support while maximizing revenue through ads, sync licensing, and monetization tools.',
+  },
+  {
+    title: 'YouTube Content ID & Channel Monetization',
+    description:
+      'Protect your music on YouTube and earn money from others using your content, while growing and monetizing your own channel.',
+  },
+  {
+    title: 'Fast Delivery to 150+ Platforms Worldwide',
+    description:
+      'Distribute your music instantly to over 150 global platforms, ensuring quick availability across all major streaming services.',
+  },
+];
 
 export const service = [
   {
@@ -411,24 +437,20 @@ export const reasonsToChoose = [
 ];
 
 export const otherServises = [
-  {    title: 'Digital Content Creation',  },
-  {title: 'Content Licensing & Rights Management',},
-  {title: 'Digital Marketing',},
-  {    title: 'Audio/Video Production', },
-   {
+  { title: 'Digital Content Creation' },
+  { title: 'Content Licensing & Rights Management' },
+  { title: 'Digital Marketing' },
+  { title: 'Audio/Video Production' },
+  {
     title: 'Hindi/Bhojpuri script & song lyrics composition',
-    
   },
-   {
+  {
     title: 'poster designing',
-   
   },
-   {
+  {
     title: 'Promotions & Advertisement and other Digital Media Solutions',
-  
   },
-  { title: 'IPRS Registration for Artist, Composer & Publishers' }
-  
+  { title: 'IPRS Registration for Artist, Composer & Publishers' },
 ];
 
 export const publishingRoyalties = [
@@ -524,14 +546,13 @@ export const headings = [
 export const contactNumbers = [
   {
     phone: '9326719497',
-  type:1
+    type: 1,
   },
 
   {
     phone: '9326719497',
-  type:2
+    type: 2,
   },
-
 ];
 
 export const top6Musics = [
@@ -548,5 +569,5 @@ export const top6Musics = [
     link: 'https://www.youtube.com/embed/LWkPAvE6wMs?si=5-rs0xeo3Z689P1Z',
   },
   { link: 'https://www.youtube.com/embed/61TrcabmVkw?si=0N5-s96DLLFtMA-s' },
-  {link:'https://www.youtube.com/embed/lV6y34Cof_4?si=bgOtekU883SyU-7j'}
+  { link: 'https://www.youtube.com/embed/lV6y34Cof_4?si=bgOtekU883SyU-7j' },
 ];

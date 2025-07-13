@@ -14,7 +14,7 @@ import {
 } from '../../assets/brand-Icons';
 import Link from 'next/link';
 
-export const HoverEffect = ({ items, className, page }) => {
+export const HoverEffect = ({ items, className, page, showIcons }) => {
   let [hoveredIndex, setHoveredIndex] = useState(null);
   const musicPlateformsIcon = {
     Spotify: <Spotify width={48} />,
@@ -28,7 +28,7 @@ export const HoverEffect = ({ items, className, page }) => {
   return (
     <div
       className={cn(
-        'grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10',
+        `grid grid-cols-1 md:grid-cols-2  lg:grid-cols-${!showIcons && '3'}  py-10`,
         className
       )}
     >
@@ -63,10 +63,12 @@ export const HoverEffect = ({ items, className, page }) => {
             <CardTitle className={`text-black dark:text-white`}>
               {page === 'distribution' ? (
                 <div className="flex items-center justify-center gap-3">
-                  <span>
-                    {musicPlateformsIcon[item.title] ||
-                      musicPlateformsIcon.other}
-                  </span>
+                  {!showIcons && (
+                    <span>
+                      {musicPlateformsIcon[item.title] ||
+                        musicPlateformsIcon.other}
+                    </span>
+                  )}
                   <span>{item.title}</span>
                 </div>
               ) : (

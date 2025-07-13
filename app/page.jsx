@@ -3,12 +3,12 @@ import { Code } from '@heroui/code';
 import { title } from '../components/primitives';
 import { Card, CardBody, CardHeader } from '@heroui/card';
 import { top6Musics } from '../constant';
-import TextOnGlass from '../components/TextOnGlass';
+import { TextOnGlass } from '../components/TextOnGlass';
 
 export default function Home() {
   return (
     <section className="">
-       <div className="relative h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
+      <div className="relative h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
         {/* 🔸 Background Video */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -28,32 +28,34 @@ export default function Home() {
         <TextOnGlass
           primaryPoint={'MTrax Digital Media'}
           heading={', a leading platform for CMS & Music Distribution'}
-        detail={'MTrax Digital Media Pvt Ltd provides broad range of services from YouTube CMS to Music distribution on all major OTT platforms.'}
+          detail={
+            'MTrax Digital Media Pvt Ltd provides broad range of services from YouTube CMS to Music distribution on all major OTT platforms.'
+          }
         />
       </div>
-      <div className='px-24 py-20'>
-         <h1 id="musicCareer" className={`${title({ size: 'lg' })} my-12 `}>
-             Overviews
+      <div className="px-24 py-20">
+        <h1 id="musicCareer" className={`${title({ size: 'lg' })} my-12 `}>
+          Overviews
         </h1>
-        <div className='grid grid-cols-3 py-16 gap-12'>
+        <div className="grid grid-cols-3 py-16 gap-12">
           {top6Musics.map((item) => {
             return (
-              <div key={item.link} className='border h-72 rounded-xl overflow-hidden border-neutral-400'>
-
-            <iframe
-              className='w-full h-full'
-              src={item.link}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
+              <div
+                key={item.link}
+                className="border h-72 rounded-xl overflow-hidden border-neutral-400"
+              >
+                <iframe
+                  className="w-full h-full"
+                  src={item.link}
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                 />
-
-            
-          </div>
-           )
-         })}
-          </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

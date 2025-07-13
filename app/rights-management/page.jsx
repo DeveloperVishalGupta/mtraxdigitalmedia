@@ -76,7 +76,10 @@ Here at HarDan Music Group, we are committed to helping artists bag their rights
           <div className="grid sm:grid-cols-2 gap-5 pt-5 gap-y-5 sm:gap-y-12">
             {rightsProtect.map((item, index) => {
               return (
-                <div key={index} className="text-start w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto">
+                <div
+                  key={index}
+                  className="text-start w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto"
+                >
                   <div className="flex gap-3 items-center">
                     <span>{servicesImage[item.title]}</span>
                     <h1

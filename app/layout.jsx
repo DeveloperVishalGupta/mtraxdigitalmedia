@@ -12,9 +12,6 @@ import { useEffect, useState } from 'react';
 import { WhatsappIcon } from '../assets/brand-Icons';
 
 export default function RootLayout({ children }) {
-
-                      
-                       
   const pageRoutes = siteConfig.pageRoutes;
   const [companyLinks, setCompanyLinks] = useState([]);
   const [usefulLinks, setUsefulLinks] = useState([]);
@@ -27,7 +24,7 @@ export default function RootLayout({ children }) {
   }, [pageRoutes]);
   return (
     <html suppressHydrationWarning lang="en">
-      <head >
+      <head>
         <meta charSet="UTF-8" />
       </head>
       <body
@@ -39,15 +36,11 @@ export default function RootLayout({ children }) {
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="capitalize">
-              {children}
-            </main>
+            <main className="capitalize">{children}</main>
             <footer className="w-full px-0 sm:px-36 py-3">
               <div className="grid gap-12 sm:gap-0 sm:grid-cols-3 justify-center">
                 <div className="text-center sm:text-start">
-                  <GetInTouch/>
-                 
-                  
+                  <GetInTouch />
                 </div>
                 <div className="text-center sm:text-start">
                   <h1 className={title({ size: 'sm' })}>Company</h1>

@@ -16,18 +16,12 @@ const location = {
 };
 
 const MyGoogleMap = () => {
-  console.log(process.env.NEXT_PUBLIC_MAPBOX_TOKEN);
-  
   return (
-   <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
-  <GoogleMap
-    mapContainerStyle={containerStyle}
-    center={location}
-    zoom={15}
-  >
-    <Marker position={location} />
-  </GoogleMap>
-</LoadScript>
+    <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
+      <GoogleMap mapContainerStyle={containerStyle} center={location} zoom={15}>
+        <Marker position={location} />
+      </GoogleMap>
+    </LoadScript>
   );
 };
 

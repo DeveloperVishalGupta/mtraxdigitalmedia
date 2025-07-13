@@ -7,7 +7,7 @@ import youTubeMonetizationServiceImage from '../../assets/images/services-3.jpg'
 import ManagemenmServiceImage from '../../assets/images/services-4.png';
 import { CircleCheck } from '../../assets/icons/icons';
 import { Image } from '@heroui/image';
-import TextOnGlass from '../../components/TextOnGlass';
+import { TextOnGlass } from '../../components/TextOnGlass';
 
 export default function ServicesPage() {
   const servicesImage = {
@@ -37,10 +37,12 @@ export default function ServicesPage() {
         <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10" />
 
         {/* 🔸 Content */}
-         <TextOnGlass
+        <TextOnGlass
           primaryPoint={'MTrax Digital Media'}
           heading={', the best platform to grow your Music Career'}
-        detail={'If you are an artist/publisher/music company owner and think YouTube Channel management and Music Distribution a big deal, feel free to contact Us.'}
+          detail={
+            'If you are an artist/publisher/music company owner and think YouTube Channel management and Music Distribution a big deal, feel free to contact Us.'
+          }
         />
         {/* <div className="relative border p-10 rounded-2xl dark:bg-neutral-800/50 bg-white/15 z-20 text-center mx-4 sm:mx-0 sm:w-3/4 md:w-7/12 flex flex-col items-center justify-center text-white px-4">
           <div className="flex flex-col gap-4">
@@ -98,7 +100,10 @@ export default function ServicesPage() {
                 >
                   {item.details.map((detailItem, detailIndex) => {
                     return (
-                      <div key={detailIndex} className="flex gap-3 capitalize justify-start tracking-wide text-xl font-normal text-start  items-center">
+                      <div
+                        key={detailIndex}
+                        className="flex gap-3 capitalize justify-start tracking-wide text-xl font-normal text-start  items-center"
+                      >
                         <span className="">
                           <CircleCheck size={28} />
                         </span>
@@ -128,7 +133,10 @@ export default function ServicesPage() {
           <div className="grid sm:grid-cols-2 sm:px-0 px-4 sm:gap-5 pt-5 gap-y-5 sm:gap-y-12 lg:px-36">
             {reasonsToChoose.map((item, index) => {
               return (
-                <div key={index} className="text-start  sm:w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto">
+                <div
+                  key={index}
+                  className="text-start  sm:w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto"
+                >
                   <h1
                     className={`${title({ size: 'sm' })} capitalize font-semibold mb-4 text-lightThemePrimaryText dark:text-darkThemePrimaryText  `}
                   >
@@ -144,24 +152,25 @@ export default function ServicesPage() {
         </div>
       </div>
 
-       <div className="ms:mb-0 mb-12">
+      <div className="ms:mb-0 mb-12">
         <div className="flex flex-col gap-2 justify-center mb-8">
           <h1 className={`${title()} leading-normal capitalize`}>
             Other Servises
-
           </h1>
         </div>
         <div>
           <div className="grid sm:grid-cols-2 sm:px-0 px-4 sm:gap-5 pt-5 gap-y-5 sm:gap-y-12 lg:px-36">
             {otherServises.map((item, index) => {
               return (
-                <div key={index} className="text-start sm:w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto">
+                <div
+                  key={index}
+                  className="text-start sm:w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto"
+                >
                   <h1
                     className={`text-2xl text-lightThemeSecondryText dark:text-darkThemeSecondryText capitalize font-semibold mb-4`}
                   >
                     {item.title}
                   </h1>
-                 
                 </div>
               );
             })}
