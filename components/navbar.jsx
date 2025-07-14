@@ -20,6 +20,8 @@ import { siteConfig } from '../config/site';
 import { YouTube } from '../assets/brand-Icons';
 import { useEffect, useState } from 'react';
 import { headings } from '../constant';
+import Image from 'next/image';
+import MTDM from '../assets/images/MTDM.png';
 
 export const Navbar = () => {
   const pageRoutes = siteConfig.pageRoutes;
@@ -51,6 +53,7 @@ export const Navbar = () => {
       setCompanyLinks(pageRoutes.filter((item) => item.type === 1));
     }
   }, [pageRoutes]);
+
   const searchInput = (
     <div>
       <Input
@@ -91,16 +94,19 @@ export const Navbar = () => {
   );
 
   return (
-    <HeroUINavbar maxWidth="full" position="sticky">
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+    <HeroUINavbar maxWidth="full" className="py-2" position="sticky">
+      <NavbarContent className="basis-1/5 sm:basis-full " justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <p className="font-bold text-xl text-inherit text-lightThemeSecondryText dark:text-darkThemeSecondryText ">
-              <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
-                MTrax
-              </span>{' '}
-              Digital Media
-            </p>
+          <NextLink
+            className="flex justify-start items-center gap-1 ms-20 py-4"
+            href="/"
+          >
+            <Image
+              src={MTDM}
+              alt="MTrax Digital Media"
+              about="this is a logo of MTDM"
+              width={100}
+            />
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -115,7 +121,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-primary data-[active=true]:font-medium capitalize'
+                  'data-[active=true]:text-primary  data-[active=true]:font-medium capitalize'
                 )}
                 color="foreground"
                 href={item.href}

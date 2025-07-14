@@ -42,6 +42,7 @@ export default function ContactPage() {
   } = useDisclosure();
 
   const [missingFields, setMissingFields] = useState([]);
+  const [waitingForResponse, setWaitingForResponse] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     preference: '',
@@ -106,10 +107,19 @@ export default function ContactPage() {
 
         body: JSON.stringify({ data: formData }), // Important: SheetDB expects { data: {...} }
       });
+      setWaitingForResponse(true);
 
       const result = await response.json();
       if (!result.error) {
         onSuccessOpen();
+        setFormData({
+          name: '',
+          preference: '',
+          mobile: '',
+          email: '',
+          description: '',
+        });
+        setWaitingForResponse(false);
       }
     } catch (error) {
       console.error('Error while submitting form:', error);
@@ -123,11 +133,6 @@ export default function ContactPage() {
       </div>
       <div className="text-center  md:text-start">
         <div className="grid md:grid-cols-2 gap-12">
-          <div>
-            {' '}
-            <GoogleMap />
-          </div>
-
           <div className="bg-transGray row-span-2 w-full flex flex-col gap-4 rounded-lg px-4 sm:px-10 py-8">
             <Input
               name="name"
@@ -196,6 +201,7 @@ export default function ContactPage() {
               onPress={submitQueryForm}
               color="danger"
               variant="bordered"
+              isLoading={waitingForResponse}
             >
               Send message
             </Button>
@@ -296,14 +302,16 @@ Looking forward to hearing from you. Thanks!`
                 mtraxdigitalmedia@gmail.com
               </Link>
             </div>
-          </div>
-          <div className="bg-neutral-800 p-6 rounded-lg">
-            <h3 className="text-2xl font-semibold text-white mb-4">Hours</h3>
-            <div className="space-y-2">
-              <p className="text-neutral-400">
-                Monday - Friday: 10:00 AM - 8:00 PM
-              </p>
-              <p className="text-neutral-400">Saturday: 10:00 AM - 01:00 PM</p>
+            <div className="mt-6">
+              <h3 className="text-2xl font-semibold text-white mb-4">Hours</h3>
+              <div className="space-y-2">
+                <p className="text-neutral-400">
+                  Monday - Friday: 10:00 AM - 8:00 PM
+                </p>
+                <p className="text-neutral-400">
+                  Saturday: 10:00 AM - 01:00 PM
+                </p>
+              </div>
             </div>
           </div>
         </div>
