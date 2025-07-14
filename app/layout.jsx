@@ -10,6 +10,7 @@ import { siteConfig } from '../config/site';
 import NextLink from 'next/link';
 import { useEffect, useState } from 'react';
 import { WhatsappIcon } from '../assets/brand-Icons';
+import Link from 'next/link';
 
 export default function RootLayout({ children }) {
   const pageRoutes = siteConfig.pageRoutes;
@@ -98,6 +99,17 @@ export default function RootLayout({ children }) {
                       MTrax
                     </span>{' '}
                     Digital Media
+                  </p>|
+                  <p className=''>
+                    Design & Developed by
+                    <Link
+                      className='font-semibold text-xl text-inherit'
+                      
+                      href={'https://developervishalgupta.github.io/portfolio/'}
+                      target="_blank"
+                    >
+                      Arka
+                    </Link>
                   </p>
                 </div>
               </div>
