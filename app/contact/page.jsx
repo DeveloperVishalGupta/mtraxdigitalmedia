@@ -22,10 +22,10 @@ import {
 } from '@heroui/modal';
 
 export const preferences = [
-  { key: 'inquiry', label: 'Inquiry' },
+  { key: 'enquiry', label: 'Enquiry' },
   { key: 'request', label: 'Request' },
   { key: 'support for any services', label: 'Support for any services' },
-  { key: 'revenue shareing plan', label: 'Revenue shareing plan' },
+  { key: 'revenue Sharing Plan', label: 'Revenue Sharing Plan' },
 ];
 
 export default function ContactPage() {
