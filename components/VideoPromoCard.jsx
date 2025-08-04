@@ -30,7 +30,7 @@ export function VideoPromoCard({
       <div className="flex  justify-center items-center col-span-full sm:col-span-4">
         <div className="px-4 sm:px-12 py-8 flex flex-col gap-5">
           {heading}
-          <p className="text-lg font-semibold dark:text-white text-gray-500">
+          <p className="text-lg font-medium md:font-semibold dark:text-neutral-400 text-gray-500">
             {details}
           </p>
           {showPlateforms && (

@@ -71,7 +71,7 @@ export default function PublishingPage() {
     },
   ];
   return (
-    <div className="flex flex-col gap-y-20">
+    <div className="flex flex-col px-4 gap-y-20">
       <HeroSectionTemp
         heading={
           <div className="flex flex-col gap-4">
@@ -119,7 +119,7 @@ export default function PublishingPage() {
           </h1>
         </div>
         <div>
-          <div className="grid sm:grid-cols-2 gap-5 pt-5 gap-y-5 sm:gap-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pt-5 gap-y-5 sm:gap-y-12">
             {publishingRoyalties.map((item, index) => {
               return (
                 <div

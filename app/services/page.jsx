@@ -68,7 +68,7 @@ export default function ServicesPage() {
           return (
             <div key={index} className="px-4 sm:px-0">
               <h1
-                className={`${title()} flex capitalize flex-wrap justify-center w-3/4 mx-auto`}
+                className={`${title()} flex capitalize flex-wrap justify-center md:w-3/4 mx-auto`}
               >
                 {splitTitle.map((item, index) => {
                   const isLast = index === splitTitle.length - 1;
@@ -164,7 +164,7 @@ export default function ServicesPage() {
               return (
                 <div
                   key={index}
-                  className="text-start sm:w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto"
+                  className="text-start w-full md:w-4/5 shadow-lg p-4 rounded-xl dark:border-neutral-600 dark:border-2 border mx-auto"
                 >
                   <h1
                     className={`text-2xl text-lightThemeSecondryText dark:text-darkThemeSecondryText capitalize font-semibold mb-4`}

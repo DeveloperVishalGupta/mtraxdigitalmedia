@@ -37,7 +37,7 @@ export default function DistributeMusic() {
           </div>
           <HoverEffect items={musicPlatforms} page={'distribution'} />
         </div>
-        <div className="  px-4 sm:px-0">
+        <div className="px-4 sm:px-0">
           <VideoPromoCard
             image={singer}
             heading={
@@ -56,7 +56,7 @@ export default function DistributeMusic() {
           />
         </div>
 
-        <div className="h-[calc(100vh-6.625rem)] px-4 flex justify-center items-start flex-col">
+        <div className=" mt-12 md:mt-0 md:h-[calc(100vh-6.625rem)] px-4 flex justify-center items-start flex-col">
           <div className="flex flex-col gap-5 items-center mx-auto justify-center mb-8">
             <h1 className={`${title()} `}>
               Promote Your Music in All Major{' '}
@@ -86,7 +86,7 @@ export default function DistributeMusic() {
           </div>
         </div>
 
-        <div className="px-4 sm:px-0">
+        <div className="px-4 mt-12 md:mt-0 sm:px-0">
           <Discribe />
         </div>
       </div>

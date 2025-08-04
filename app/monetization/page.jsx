@@ -110,7 +110,7 @@ export const YoutubeMonetizationSteps = [
 
 export default function MonetizationPage() {
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col  px-4 gap-20">
       <div>
         <HeroSectionTemp
           heading={

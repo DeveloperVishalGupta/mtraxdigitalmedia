@@ -1,4 +1,3 @@
-import React from 'react';
 import { title } from './primitives';
 
 export function TextOnGlass({ primaryPoint, heading, detail }) {
@@ -11,7 +10,7 @@ export function TextOnGlass({ primaryPoint, heading, detail }) {
         <h1
           style={{ lineHeight: 1.15 }}
           id="musicCareer"
-          className={`${title({ size: 'lg' })} w-4/5 mx-auto leading-loose`}
+          className={`${title({ size: 'lg' })} md:w-4/5 mx-auto leading-loose`}
         >
           {primaryPoint?.split(' ')?.map((item, index) => {
             return index === 0 ? (
@@ -34,7 +33,7 @@ export function TextOnGlass({ primaryPoint, heading, detail }) {
           {heading}
         </h1>
       </div>
-      <p className="text-2xl w-4/5 leading-10 mt-12 font-semibold dark:text-neutral-200 text-neutral-200">
+      <p className="text-xl md:text-2xl md:w-4/5 leading-8 md:leading-10 mt-12 font-semibold dark:text-neutral-200 text-neutral-200">
         {detail}
       </p>
     </div>

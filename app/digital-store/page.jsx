@@ -69,7 +69,7 @@ export default function DigitalStorePage() {
         />
       </div>
 
-      <div className="h-[calc(100vh-6.625rem)] flex justify-center items-start flex-col">
+      <div className="md:h-[calc(100vh-6.625rem)] flex justify-center items-start flex-col">
         <div className="flex flex-col gap-5 items-center mx-auto justify-center mb-8">
           <h1 className={`${title()} `}>Promote Your Music in All Major</h1>
           <h1

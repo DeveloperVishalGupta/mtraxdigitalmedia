@@ -11,7 +11,6 @@ import {
   Ticktock,
   YouTube,
 } from '../../assets/brand-Icons';
-import Discribe from '../../components/discribe';
 import { VideoPromoCard } from '../../components/VideoPromoCard';
 import { PageHeroSection } from '../../components/TextOnGlass';
 
@@ -73,7 +72,7 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="h-[calc(100vh-6.625rem)] px-4 flex justify-center items-start flex-col">
+        <div className=" md:h-[calc(100vh-6.625rem)] px-4 flex justify-center items-start flex-col">
           <div className="flex flex-col gap-5 items-center mx-auto justify-center mb-8">
             <h1 className={`${title()} `}>
               Promote Your Music in All Major{' '}

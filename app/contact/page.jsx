@@ -127,7 +127,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="flex flex-col gap-y-10 lg:px-28">
+    <div className="flex flex-col px-4 gap-y-10 lg:px-28">
       <div className="px-4 flex justify-center text-center md:text-start">
         <h1 className={title({})}>Get In Touch</h1>
       </div>

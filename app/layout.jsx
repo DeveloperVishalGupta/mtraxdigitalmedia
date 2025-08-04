@@ -38,9 +38,9 @@ export default function RootLayout({ children }) {
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="capitalize">{children}</main>
-            <footer className="w-full px-0 sm:px-36 py-3">
-              <div className="grid gap-12 sm:gap-0 sm:grid-cols-3 justify-center">
-                <div className="text-center sm:text-start">
+            <footer className="w-full px-0 md:px-36 py-3">
+              <div className="grid gap-6 md:gap-12 grid-cols-2  sm:gap-0 md:grid-cols-3 justify-center">
+                <div className="text-center col-span-2 md:col-span-1 sm:text-start order-3 md:order-1">
                   <GetInTouch />
                 </div>
                 <div className="text-center sm:text-start">
@@ -90,21 +90,24 @@ export default function RootLayout({ children }) {
 
               <div className="flex justify-center pt-12 pb-6 items-center">
                 <div
-                  className="flex items-center gap-1 text-current"
+                  className="md:flex items-center gap-1 text-current"
                   title="homepage"
                 >
-                  <span className="text-default-600">Powered by</span>
+                  <div className='flex gap-1 items-center'>
+ <span className="text-default-600">Powered by</span>
                   <p className="font-semibold text-xl text-inherit text-lightThemeSecondryText dark:text-darkThemeSecondryText ">
                     <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
                       MTrax
                     </span>{' '}
                     Digital Media
-                  </p>|
-                  <p className=''>
+                  </p>
+                  </div>
+                 
+                  
+                  <p className="text-center">
                     Design & Developed by
                     <Link
-                      className='font-semibold text-xl text-inherit'
-                      
+                      className="font-semibold text-xl text-inherit"
                       href={'https://developervishalgupta.github.io/portfolio/'}
                       target="_blank"
                     >

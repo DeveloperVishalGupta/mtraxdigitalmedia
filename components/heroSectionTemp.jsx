@@ -12,7 +12,7 @@ export function HeroSectionTemp({
   return (
     <div
       style={{ width: componentWidth }}
-      className={`${componentWidth && 'mx-auto'} flex justify-center h-[calc(100vh-6.625rem)] flex-col items-center`}
+      className={`${componentWidth && 'mx-auto'} flex justify-center md:h-[calc(100vh-6.625rem)] flex-col items-center`}
     >
       {heading}
       <p

@@ -1,14 +1,11 @@
-import { Snippet } from '@heroui/snippet';
-import { Code } from '@heroui/code';
 import { title } from '../components/primitives';
-import { Card, CardBody, CardHeader } from '@heroui/card';
 import { top6Musics } from '../constant';
 import { TextOnGlass } from '../components/TextOnGlass';
 
 export default function Home() {
   return (
     <section className="">
-      <div className="relative h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
+      <div className="relative h-[calc(100vh-4rem)]  flex items-center justify-center overflow-hidden">
         {/* 🔸 Background Video */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -33,11 +30,11 @@ export default function Home() {
           }
         />
       </div>
-      <div className="px-24 py-20">
+      <div className=" px-4 md:px-24 py-10 md:py-20">
         <h1 id="musicCareer" className={`${title({ size: 'lg' })} my-12 `}>
           Overviews
         </h1>
-        <div className="grid grid-cols-3 py-16 gap-12">
+        <div className="grid md:grid-cols-3 grid-cols-1 py-16 gap-4 md:gap-12">
           {top6Musics.map((item) => {
             return (
               <div
