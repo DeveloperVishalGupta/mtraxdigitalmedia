@@ -9,7 +9,6 @@ import { title } from '../components/primitives';
 import { siteConfig } from '../config/site';
 import NextLink from 'next/link';
 import { useEffect, useState } from 'react';
-import { WhatsappIcon } from '../assets/brand-Icons';
 import Link from 'next/link';
 
 export default function RootLayout({ children }) {
@@ -90,28 +89,27 @@ export default function RootLayout({ children }) {
 
               <div className="flex justify-center pt-12 pb-6 items-center">
                 <div
-                  className="md:flex items-center gap-1 text-current"
+                  className="items-center gap-1 text-current"
                   title="homepage"
                 >
-                  <div className='flex gap-1 items-center'>
- <span className="text-default-600">Powered by</span>
-                  <p className="font-semibold text-xl text-inherit text-lightThemeSecondryText dark:text-darkThemeSecondryText ">
-                    <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
-                      MTrax
-                    </span>{' '}
-                    Digital Media
-                  </p>
+                  <div className="flex gap-1 items-center">
+                    <span className="text-default-600">Powered by</span>
+                    <p className="font-semibold text-xl text-inherit text-lightThemeSecondryText dark:text-darkThemeSecondryText ">
+                      <span className="text-lightThemePrimaryText dark:text-darkThemePrimaryText">
+                        MTrax
+                      </span>{' '}
+                      Digital Media
+                    </p>
                   </div>
-                 
-                  
-                  <p className="text-center">
-                    Design & Developed by
+
+                  <p className="text-center text-transparent">
                     <Link
-                      className="font-semibold text-xl text-inherit"
+                      title="Vishal Gupta"
+                      className="text-sm"
                       href={'https://developervishalgupta.github.io/portfolio/'}
                       target="_blank"
                     >
-                      Arka
+                      Design & Developed by Arka
                     </Link>
                   </p>
                 </div>

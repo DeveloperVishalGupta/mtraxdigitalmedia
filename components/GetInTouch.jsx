@@ -54,7 +54,7 @@ function GetInTouch() {
             <Link
               target="_blank"
               href={whatsappUrl}
-              className="text-white py-2 block"
+              className="py-2 block"
             >{`(+91) 9326719497`}</Link>
           </div>
         </div>
