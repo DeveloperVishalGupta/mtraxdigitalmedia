@@ -10,8 +10,13 @@ import { siteConfig } from '../config/site';
 import NextLink from 'next/link';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Script from 'next/script';
+import PageViewTracker from './analytics/pageview-listener';
+const GA_ID = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
 
 export default function RootLayout({ children }) {
+  console.log('GA_ID:', GA_ID);
+  
   const pageRoutes = siteConfig.pageRoutes;
   const [companyLinks, setCompanyLinks] = useState([]);
   const [usefulLinks, setUsefulLinks] = useState([]);
@@ -26,6 +31,24 @@ export default function RootLayout({ children }) {
     <html suppressHydrationWarning lang="en">
       <head>
         <meta charSet="UTF-8" />
+         <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
       </head>
       <body
         className={clsx(
@@ -33,6 +56,7 @@ export default function RootLayout({ children }) {
           fontSans.variable
         )}
       >
+        <PageViewTracker />
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
