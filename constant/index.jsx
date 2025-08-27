@@ -436,7 +436,7 @@ export const reasonsToChoose = [
   },
 ];
 
-export const otherServises = [
+export const otherServices = [
   { title: 'Digital Content Creation' },
   { title: 'Content Licensing & Rights Management' },
   { title: 'Digital Marketing' },

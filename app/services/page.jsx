@@ -1,6 +1,6 @@
 'use client';
 import { title } from '../../components/primitives';
-import { otherServises, reasonsToChoose, service } from '../../constant';
+import { otherServices, reasonsToChoose, service } from '../../constant';
 import worldwideDistributionServiceImage from '../../assets/images/services-1.jpg';
 import musicPublishingServiceImage from '../../assets/images/services-2.jpg';
 import youTubeMonetizationServiceImage from '../../assets/images/services-3.jpg';
@@ -155,12 +155,12 @@ export default function ServicesPage() {
       <div className="ms:mb-0 mb-12">
         <div className="flex flex-col gap-2 justify-center mb-8">
           <h1 className={`${title()} leading-normal capitalize`}>
-            Other Servises
+            Other Services
           </h1>
         </div>
         <div>
           <div className="grid sm:grid-cols-2 sm:px-0 px-4 sm:gap-5 pt-5 gap-y-5 sm:gap-y-12 lg:px-36">
-            {otherServises.map((item, index) => {
+            {otherServices.map((item, index) => {
               return (
                 <div
                   key={index}
