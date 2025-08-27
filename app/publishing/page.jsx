@@ -172,7 +172,7 @@ export default function PublishingPage() {
           }
           componentWidth={'90%'}
           detailsFont={20}
-          details={`Once you appoint HarDan Music Group as your publishing partner, you focus more on creating some amazing music and we focus on publishing them on the right platform and managing your music rights effectively.`}
+          details={`Once you appoint Music Group as your publishing partner, you focus more on creating some amazing music and we focus on publishing them on the right platform and managing your music rights effectively.`}
         />
       </div>
     </div>

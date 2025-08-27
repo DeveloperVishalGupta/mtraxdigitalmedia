@@ -54,7 +54,7 @@ export default function RightsManagementPage() {
             </h1>
           }
           details={`We know how hard it is for musicians and artists to create masterpieces. Is that all? No, protecting your digital music rights and royalties across various platforms globally is a hectic job. And, if you do not manage it properly, others start copying your music and distributing it for free - putting all your efforts in vain. 
-Here at HarDan Music Group, we are committed to helping artists bag their rights properly and earn their revenue effortlessly. We ensure that your music is distributed with proper agreements and rights so that you earn royalties every time without fail and get compensated. That's why we've made Digital Rights Manager (DRM). DRM will allow every artist to protect their music free of charge.`}
+Here at Music Group, we are committed to helping artists bag their rights properly and earn their revenue effortlessly. We ensure that your music is distributed with proper agreements and rights so that you earn royalties every time without fail and get compensated. That's why we've made Digital Rights Manager (DRM). DRM will allow every artist to protect their music free of charge.`}
         />
       </div>
 

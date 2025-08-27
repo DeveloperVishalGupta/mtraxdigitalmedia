@@ -195,7 +195,7 @@ export const tabs = [
 // data/tableData.ts
 
 export const musicDistributors = [
-  'HARDAN MUSIC',
+  'MUSIC',
   'ONE MUSIC RECORD',
   'TUNECORE',
   'DISTROKID',

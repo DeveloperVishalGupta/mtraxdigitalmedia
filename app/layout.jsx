@@ -13,9 +13,10 @@ import Link from 'next/link';
 import Script from 'next/script';
 import PageViewTracker from './analytics/pageview-listener';
 const GA_ID = process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID;
+console.log('GA_ID:', GA_ID);
+
 
 export default function RootLayout({ children }) {
-  console.log('GA_ID:', GA_ID);
   
   const pageRoutes = siteConfig.pageRoutes;
   const [companyLinks, setCompanyLinks] = useState([]);

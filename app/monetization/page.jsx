@@ -14,7 +14,7 @@ export const YoutubeMonetizationSteps = [
           <h1 className={title()}>Sign up</h1>
         </div>
         <p className="text-2xl max-w-2xl leading-10 mt-24 font-semibold dark:text-neutral-400 text-neutral-500">
-          Create your HarDan Music account today and distribute music to
+          Create your Music account today and distribute music to
           multiple stores right from our dashboard. It's as easy as one, two, or
           three
         </p>
@@ -57,7 +57,7 @@ export const YoutubeMonetizationSteps = [
           <h1 className={title({})}>Upload Your Music</h1>
         </div>
         <p className="text-2xl max-w-2xl leading-10 mt-24 font-semibold dark:text-neutral-400 text-neutral-500">
-          Upload your music to HarDan music and provide detailed info like track
+          Upload your music to music and provide detailed info like track
           name, artist name, artwork, and more.
         </p>
       </div>
@@ -170,7 +170,7 @@ export default function MonetizationPage() {
               </span>
             </h1>
           }
-          details={`Start monetizing your YouTube channels and earn unlimited income whenever someone  streams or uses your music. Get expert assistance to optimize and manage your YouTube   channels efficiently. Skyrocket your music career with ous Group.
+          details={`Start monetizing your YouTube channels and earn unlimited income whenever someone  streams or uses your music. Get expert assistance to optimize and manage your YouTube   channels efficiently. Skyrocket your music career with ous.
 `}
           componentWidth={'90%'}
           btnTitle="sign up now"
